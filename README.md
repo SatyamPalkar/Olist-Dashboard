@@ -2,6 +2,8 @@
 
 End-to-end analytics project on the public [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce): raw CSVs → tested PostgreSQL warehouse → grain-safe extracts → a four-page Tableau dashboard generated from code and validated in Tableau Desktop.
 
+**▶ Live dashboard: https://satyampalkar.github.io/portfolio/olist/**. This interactive web version has the same four pages and the same figures, and runs in the browser with no install.
+
 ---
 
 ## 30-second summary
@@ -263,6 +265,16 @@ open "tableau/Olist Executive Dashboard.twbx"
 ```
 
 Details, metric definitions and verification: [tableau/README.md](tableau/README.md).
+
+### Web dashboard (live)
+
+The interactive version at https://satyampalkar.github.io/portfolio/olist/ is a static site in [`web/site/`](web/site/) (HTML, CSS and JavaScript, with ECharts for the charts). It reads a small aggregated JSON file built from the same extracts.
+
+```bash
+python3 web/build_data.py      # tableau/data/*.csv -> web/site/data/dashboard.json (aggregates only)
+python3 web/check_data.py      # independently recomputes the headline figures and compares them
+cd web/site && python3 -m http.server 8000   # then open http://localhost:8000
+```
 
 ### Power BI (Planned binary)
 
