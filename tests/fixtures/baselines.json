@@ -1,0 +1,23 @@
+{
+  "_comment": "Regression baselines from Olist Brazilian E-Commerce public dump (Kaggle). Recomputed by tests/helpers/metrics.py. Update only when raw source files change.",
+  "source": "data/raw/*.csv",
+  "profiled_on": "2026-11-18",
+  "total_orders": 99441,
+  "total_order_items": 112650,
+  "total_payments": 103886,
+  "total_reviews": 99224,
+  "total_customers": 99441,
+  "unique_customers": 96096,
+  "repeat_customers": 2997,
+  "merchandise_revenue": 13591643.70,
+  "freight_total": 2256599.44,
+  "payment_total": 16008872.12,
+  "payment_minus_order_value": 160628.98,
+  "delivered_orders": 96478,
+  "late_deliveries_with_both_dates": 7826,
+  "orders_without_items": 775,
+  "orders_without_payments": 1,
+  "duplicate_review_id_rows": 814,
+  "orders_with_multiple_reviews": 547,
+  "products_unmapped_categories": 13
+}

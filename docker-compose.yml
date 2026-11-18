@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: retail_bi_postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-retail_bi}
+      POSTGRES_USER: ${POSTGRES_USER:-retail_bi}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-retail_bi}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - retail_bi_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-retail_bi} -d ${POSTGRES_DB:-retail_bi}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  retail_bi_pgdata:

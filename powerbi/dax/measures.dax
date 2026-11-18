@@ -1,0 +1,237 @@
+-- =============================================================================
+-- Olist Retail Analytics — DAX measures
+-- Home table: _Measures (create empty table; paste each measure in Desktop)
+-- Source facts: analytics.fact_* via Import model
+-- Currency: BRL
+-- =============================================================================
+
+-- ---------------------------------------------------------------------------
+-- Helper / filter policy
+-- Pending BA Phase 7: flip Sales Status Filter if "delivered-only" is mandated.
+-- ---------------------------------------------------------------------------
+
+-- Sales Status Filter (measure used inside CALCULATE)
+-- Default: exclude canceled orders only.
+Sales Orders Filter =
+CALCULATE (
+    [Total Orders],
+    fact_orders[is_canceled] = FALSE
+)
+
+-- ---------------------------------------------------------------------------
+-- Revenue (aligned to database/docs/kpi_definitions.md)
+-- Canonical "Revenue" / Total Revenue = merchandise_sales (SUM price)
+-- Order Value (GMV) = merchandise + freight — separate measure, never label as profit
+-- Filter: is_canceled = FALSE (SQL Architect). BA delivered-only = Phase 7 pending.
+-- ---------------------------------------------------------------------------
+
+Total Revenue =
+CALCULATE (
+    SUM ( fact_orders[merchandise_sales] ),
+    fact_orders[is_canceled] = FALSE
+)
+
+Merchandise Revenue =
+[Total Revenue]
+
+Freight Revenue =
+CALCULATE (
+    SUM ( fact_orders[freight_charges] ),
+    fact_orders[is_canceled] = FALSE
+)
+
+Total Order Value =
+CALCULATE (
+    SUM ( fact_orders[order_value] ),
+    fact_orders[is_canceled] = FALSE
+)
+
+-- Line-grain aliases (Product / Seller pages). Prefer with non-canceled via
+-- relationship to fact_orders or visual-level filter when available.
+Merchandise Revenue (Items) =
+SUM ( fact_order_items[price] )
+
+Freight Revenue (Items) =
+SUM ( fact_order_items[freight_value] )
+
+Total Order Value (Items) =
+SUM ( fact_order_items[item_total] )
+
+-- ---------------------------------------------------------------------------
+-- Orders & customers
+-- ---------------------------------------------------------------------------
+
+Total Orders =
+CALCULATE (
+    DISTINCTCOUNT ( fact_orders[order_id] ),
+    fact_orders[is_canceled] = FALSE
+)
+
+-- AOV = average order_value at order grain (SQL Architect vw_average_order_value)
+Average Order Value =
+CALCULATE (
+    AVERAGE ( fact_orders[order_value] ),
+    fact_orders[is_canceled] = FALSE
+)
+
+-- Merchandise-only AOV variant (document if used on a visual)
+Average Merchandise per Order =
+DIVIDE ( [Merchandise Revenue], [Total Orders] )
+
+Unique Customers =
+CALCULATE (
+    DISTINCTCOUNT ( fact_orders[customer_key] ),
+    fact_orders[is_canceled] = FALSE
+)
+
+Repeat Customers =
+CALCULATE (
+    DISTINCTCOUNT ( dim_customers[customer_key] ),
+    dim_customers[is_repeat_customer] = TRUE
+)
+
+Repeat Customer Rate =
+DIVIDE (
+    CALCULATE (
+        DISTINCTCOUNT ( fact_orders[customer_key] ),
+        fact_orders[is_canceled] = FALSE,
+        dim_customers[is_repeat_customer] = TRUE
+    ),
+    [Unique Customers]
+)
+
+-- Average orders per customer (purchase behaviour)
+Customer Order Frequency =
+DIVIDE ( [Total Orders], [Unique Customers] )
+
+-- ---------------------------------------------------------------------------
+-- Time intelligence (requires marked dim_date[full_date])
+-- Olist coverage ~2016-09 to 2018-10 → YoY supported where prior year exists
+-- ---------------------------------------------------------------------------
+
+Revenue Previous Month =
+CALCULATE (
+    [Total Revenue],
+    DATEADD ( dim_date[full_date], -1, MONTH )
+)
+
+Revenue MoM Growth =
+DIVIDE (
+    [Total Revenue] - [Revenue Previous Month],
+    [Revenue Previous Month]
+)
+
+Revenue Previous Year =
+CALCULATE (
+    [Total Revenue],
+    SAMEPERIODLASTYEAR ( dim_date[full_date] )
+)
+
+Revenue YoY Growth =
+DIVIDE (
+    [Total Revenue] - [Revenue Previous Year],
+    [Revenue Previous Year]
+)
+
+Orders Previous Month =
+CALCULATE (
+    [Total Orders],
+    DATEADD ( dim_date[full_date], -1, MONTH )
+)
+
+-- ---------------------------------------------------------------------------
+-- Delivery / logistics (delivered rows with known late flag)
+-- ---------------------------------------------------------------------------
+
+Delivered Orders With SLA =
+CALCULATE (
+    DISTINCTCOUNT ( fact_orders[order_id] ),
+    fact_orders[is_delivered] = TRUE,
+    NOT ISBLANK ( fact_orders[is_late_delivery] )
+)
+
+Late Deliveries =
+CALCULATE (
+    DISTINCTCOUNT ( fact_orders[order_id] ),
+    fact_orders[is_delivered] = TRUE,
+    fact_orders[is_late_delivery] = TRUE
+)
+
+On Time Deliveries =
+CALCULATE (
+    DISTINCTCOUNT ( fact_orders[order_id] ),
+    fact_orders[is_delivered] = TRUE,
+    fact_orders[is_late_delivery] = FALSE
+)
+
+Late Delivery Rate =
+DIVIDE ( [Late Deliveries], [Delivered Orders With SLA] )
+
+On-time Delivery Rate =
+DIVIDE ( [On Time Deliveries], [Delivered Orders With SLA] )
+
+Average Delivery Time =
+CALCULATE (
+    AVERAGE ( fact_orders[delivery_days] ),
+    fact_orders[is_delivered] = TRUE,
+    NOT ISBLANK ( fact_orders[delivery_days] )
+)
+
+-- ---------------------------------------------------------------------------
+-- Satisfaction
+-- Prefer review fact grain; fallback measure uses denormalised order score
+-- ---------------------------------------------------------------------------
+
+Average Review Score =
+AVERAGE ( fact_order_reviews[review_score] )
+
+Average Review Score (Order) =
+CALCULATE (
+    AVERAGE ( fact_orders[review_score] ),
+    NOT ISBLANK ( fact_orders[review_score] )
+)
+
+Review Count =
+COUNTROWS ( fact_order_reviews )
+
+-- ---------------------------------------------------------------------------
+-- Payments
+-- ---------------------------------------------------------------------------
+
+Payment Value =
+SUM ( fact_payments[payment_value] )
+
+-- ---------------------------------------------------------------------------
+-- Dynamic title helpers
+-- ---------------------------------------------------------------------------
+
+Selected Period Label =
+VAR MinD = MIN ( dim_date[full_date] )
+VAR MaxD = MAX ( dim_date[full_date] )
+RETURN
+    IF (
+        HASONEVALUE ( dim_date[year_month] ),
+        "Period: " & SELECTEDVALUE ( dim_date[year_month] ),
+        "Period: " & FORMAT ( MinD, "YYYY-MM-DD" ) & " to " & FORMAT ( MaxD, "YYYY-MM-DD" )
+    )
+
+Selected Category Label =
+VAR Cats = DISTINCTCOUNT ( dim_products[product_category_name_english] )
+RETURN
+    IF (
+        Cats = 1,
+        "Category: " & SELECTEDVALUE ( dim_products[product_category_name_english] ),
+        IF ( ISFILTERED ( dim_products[product_category_name_english] ), "Categories: (multiple)", "Category: All" )
+    )
+
+Page Title Executive =
+"Executive Overview — " & [Selected Period Label]
+
+-- ---------------------------------------------------------------------------
+-- Formatting hints (set in Desktop Model view)
+-- Total Revenue, Merchandise Revenue, Freight Revenue, AOV, Payment Value → R$ #,##0.00
+-- Rates / MoM / YoY / Repeat → 0.0%
+-- Average Delivery Time → 0.00
+-- Average Review Score → 0.00
+-- Total Orders, Unique Customers → #,##0
+-- ---------------------------------------------------------------------------

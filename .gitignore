@@ -1,0 +1,60 @@
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+*.pem
+credentials.json
+kaggle.json
+**/secrets.*
+**/serviceAccount*.json
+
+# Raw & processed data (immutable raw stays local)
+data/raw/**
+!data/raw/.gitkeep
+data/processed/**
+!data/processed/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Power BI local caches / user state
+*.pbix.bak
+~$*
+# Optional: uncomment to keep local PBIX out of git until Orchestrator asks
+# powerbi/*.pbix
+
+# Docker volumes / dumps
+*.sql.gz
+backups/
+
+# Internal agent working notes and local drafts (not part of the portfolio)
+agent_continuity/
+Olist Retail Analytics - Draft.twb
+Olist Retail Analytics - Dashboard.twb
+*.twbr
+.~*
+
+# Tableau caches
+*.tdsx.bak
+
+# Editor artefacts
+.cursor

@@ -1,0 +1,1064 @@
+{
+  "scope": {
+    "dataset": "Olist Brazilian E-Commerce Public Dataset",
+    "order_status_filter": "delivered",
+    "purchase_date_min": "2016-09-15 12:16:38",
+    "purchase_date_max": "2018-08-29 15:00:37",
+    "delivered_orders": 96478,
+    "unique_customers": 93358,
+    "note": "Commercial KPIs use merchandise price and freight from order_items for delivered orders only. Revenue is GMV/merchandise sales, not profit."
+  },
+  "commercial": {
+    "merchandise_revenue": 13221498.11,
+    "freight_charges": 2202965.54,
+    "total_order_value": 15424463.649999999,
+    "average_order_value": 159.87544984348762,
+    "monthly_revenue": [
+      {
+        "year_month": "2016-09",
+        "merchandise_revenue": 134.97,
+        "orders": 1,
+        "mom_growth_pct": null
+      },
+      {
+        "year_month": "2016-10",
+        "merchandise_revenue": 40325.11,
+        "orders": 265,
+        "mom_growth_pct": 29777.091205453064
+      },
+      {
+        "year_month": "2016-12",
+        "merchandise_revenue": 10.9,
+        "orders": 1,
+        "mom_growth_pct": -99.97296969555694
+      },
+      {
+        "year_month": "2017-01",
+        "merchandise_revenue": 111798.36,
+        "orders": 750,
+        "mom_growth_pct": 1025573.0275229358
+      },
+      {
+        "year_month": "2017-02",
+        "merchandise_revenue": 234223.4,
+        "orders": 1653,
+        "mom_growth_pct": 109.50521993345879
+      },
+      {
+        "year_month": "2017-03",
+        "merchandise_revenue": 359198.85,
+        "orders": 2546,
+        "mom_growth_pct": 53.35737163750505
+      },
+      {
+        "year_month": "2017-04",
+        "merchandise_revenue": 340669.68,
+        "orders": 2303,
+        "mom_growth_pct": -5.158471414927968
+      },
+      {
+        "year_month": "2017-05",
+        "merchandise_revenue": 489338.25,
+        "orders": 3546,
+        "mom_growth_pct": 43.64009441638599
+      },
+      {
+        "year_month": "2017-06",
+        "merchandise_revenue": 421923.37,
+        "orders": 3135,
+        "mom_growth_pct": -13.776744409414142
+      },
+      {
+        "year_month": "2017-07",
+        "merchandise_revenue": 481604.52,
+        "orders": 3872,
+        "mom_growth_pct": 14.14502116818037
+      },
+      {
+        "year_month": "2017-08",
+        "merchandise_revenue": 554699.7,
+        "orders": 4193,
+        "mom_growth_pct": 15.177428152044747
+      },
+      {
+        "year_month": "2017-09",
+        "merchandise_revenue": 607399.67,
+        "orders": 4150,
+        "mom_growth_pct": 9.500630701621082
+      },
+      {
+        "year_month": "2017-10",
+        "merchandise_revenue": 648247.65,
+        "orders": 4478,
+        "mom_growth_pct": 6.725057983650196
+      },
+      {
+        "year_month": "2017-11",
+        "merchandise_revenue": 987765.37,
+        "orders": 7289,
+        "mom_growth_pct": 52.374693529548466
+      },
+      {
+        "year_month": "2017-12",
+        "merchandise_revenue": 726033.1900000001,
+        "orders": 5513,
+        "mom_growth_pct": -26.4974039330818
+      },
+      {
+        "year_month": "2018-01",
+        "merchandise_revenue": 924645.0,
+        "orders": 7069,
+        "mom_growth_pct": 27.35574802027989
+      },
+      {
+        "year_month": "2018-02",
+        "merchandise_revenue": 826437.13,
+        "orders": 6555,
+        "mom_growth_pct": -10.621143249571452
+      },
+      {
+        "year_month": "2018-03",
+        "merchandise_revenue": 953356.25,
+        "orders": 7003,
+        "mom_growth_pct": 15.35738356770102
+      },
+      {
+        "year_month": "2018-04",
+        "merchandise_revenue": 973534.09,
+        "orders": 6798,
+        "mom_growth_pct": 2.1165057658141917
+      },
+      {
+        "year_month": "2018-05",
+        "merchandise_revenue": 977544.6900000001,
+        "orders": 6749,
+        "mom_growth_pct": 0.41196297502021917
+      },
+      {
+        "year_month": "2018-06",
+        "merchandise_revenue": 856077.86,
+        "orders": 6099,
+        "mom_growth_pct": -12.42570608204112
+      },
+      {
+        "year_month": "2018-07",
+        "merchandise_revenue": 867953.46,
+        "orders": 6159,
+        "mom_growth_pct": 1.3872102708041067
+      },
+      {
+        "year_month": "2018-08",
+        "merchandise_revenue": 838576.64,
+        "orders": 6351,
+        "mom_growth_pct": -3.3846077415256692
+      }
+    ],
+    "recent_monthly": [
+      {
+        "year_month": "2018-01",
+        "merchandise_revenue": 924645.0,
+        "orders": 7069,
+        "mom_growth_pct": 27.35574802027989
+      },
+      {
+        "year_month": "2018-02",
+        "merchandise_revenue": 826437.13,
+        "orders": 6555,
+        "mom_growth_pct": -10.621143249571452
+      },
+      {
+        "year_month": "2018-03",
+        "merchandise_revenue": 953356.25,
+        "orders": 7003,
+        "mom_growth_pct": 15.35738356770102
+      },
+      {
+        "year_month": "2018-04",
+        "merchandise_revenue": 973534.09,
+        "orders": 6798,
+        "mom_growth_pct": 2.1165057658141917
+      },
+      {
+        "year_month": "2018-05",
+        "merchandise_revenue": 977544.6900000001,
+        "orders": 6749,
+        "mom_growth_pct": 0.41196297502021917
+      },
+      {
+        "year_month": "2018-06",
+        "merchandise_revenue": 856077.86,
+        "orders": 6099,
+        "mom_growth_pct": -12.42570608204112
+      },
+      {
+        "year_month": "2018-07",
+        "merchandise_revenue": 867953.46,
+        "orders": 6159,
+        "mom_growth_pct": 1.3872102708041067
+      },
+      {
+        "year_month": "2018-08",
+        "merchandise_revenue": 838576.64,
+        "orders": 6351,
+        "mom_growth_pct": -3.3846077415256692
+      }
+    ]
+  },
+  "customer": {
+    "unique_customers": 93358,
+    "repeat_customers": 2801,
+    "repeat_customer_rate_pct": 3.0002784978255748,
+    "orders_per_customer": 1.0334197390689603,
+    "average_review_score": 4.156186520855942,
+    "segments": [
+      {
+        "segment": "Low",
+        "customers": 23341,
+        "merchandise_revenue": 679248.11,
+        "avg_spend": 29.101071505076902,
+        "avg_orders": 1.004541364980078,
+        "revenue_share_pct": 5.1374519313076545
+      },
+      {
+        "segment": "Medium",
+        "customers": 23338,
+        "merchandise_revenue": 1527015.44,
+        "avg_spend": 65.43043277058874,
+        "avg_orders": 1.0159396692090152,
+        "revenue_share_pct": 11.549488774233922
+      },
+      {
+        "segment": "High",
+        "customers": 23339,
+        "merchandise_revenue": 2747817.32,
+        "avg_spend": 117.73500664124427,
+        "avg_orders": 1.0299070225802305,
+        "revenue_share_pct": 20.782949837747246
+      },
+      {
+        "segment": "Top",
+        "customers": 23340,
+        "merchandise_revenue": 8267417.24,
+        "avg_spend": 354.216676949443,
+        "avg_orders": 1.0832904884318766,
+        "revenue_share_pct": 62.53010945671118
+      }
+    ]
+  },
+  "operational": {
+    "average_delivery_days": 12.558217098051976,
+    "late_delivery_pct": 8.112366538820359,
+    "avg_actual_minus_estimated_days": -11.17812572885353,
+    "late_by_state_volume_top": [
+      {
+        "customer_state": "SP",
+        "orders": 40494,
+        "late_pct": 5.894700449449301,
+        "avg_delivery_days": 8.761385996084925,
+        "avg_review": 4.246518982102353
+      },
+      {
+        "customer_state": "RJ",
+        "orders": 12350,
+        "late_pct": 13.473684210526315,
+        "avg_delivery_days": 15.30943754217274,
+        "avg_review": 3.965140720115743
+      },
+      {
+        "customer_state": "MG",
+        "orders": 11354,
+        "late_pct": 5.61035758323058,
+        "avg_delivery_days": 12.008665646060452,
+        "avg_review": 4.19246787771378
+      },
+      {
+        "customer_state": "RS",
+        "orders": 5344,
+        "late_pct": 7.1482035928143715,
+        "avg_delivery_days": 15.300276192406853,
+        "avg_review": 4.185598948554262
+      },
+      {
+        "customer_state": "PR",
+        "orders": 4923,
+        "late_pct": 4.996953077391835,
+        "avg_delivery_days": 11.991582227413277,
+        "avg_review": 4.239591836734694
+      },
+      {
+        "customer_state": "SC",
+        "orders": 3546,
+        "late_pct": 9.75747320924986,
+        "avg_delivery_days": 14.954782876767771,
+        "avg_review": 4.133276499005399
+      },
+      {
+        "customer_state": "BA",
+        "orders": 3256,
+        "late_pct": 14.035626535626536,
+        "avg_delivery_days": 19.335465824489262,
+        "avg_review": 3.930009290802106
+      },
+      {
+        "customer_state": "DF",
+        "orders": 2080,
+        "late_pct": 7.0673076923076925,
+        "avg_delivery_days": 12.96756810897436,
+        "avg_review": 4.133816425120773
+      },
+      {
+        "customer_state": "ES",
+        "orders": 1995,
+        "late_pct": 12.230576441102757,
+        "avg_delivery_days": 15.789307110368513,
+        "avg_review": 4.079735906551549
+      },
+      {
+        "customer_state": "GO",
+        "orders": 1957,
+        "late_pct": 8.175779253960142,
+        "avg_delivery_days": 15.606338535456764,
+        "avg_review": 4.10431654676259
+      },
+      {
+        "customer_state": "PE",
+        "orders": 1593,
+        "late_pct": 10.797237915881984,
+        "avg_delivery_days": 18.448322994408407,
+        "avg_review": 4.082963901203294
+      },
+      {
+        "customer_state": "CE",
+        "orders": 1279,
+        "late_pct": 15.32447224394058,
+        "avg_delivery_days": 21.26657863492891,
+        "avg_review": 3.941869599371563
+      },
+      {
+        "customer_state": "PA",
+        "orders": 946,
+        "late_pct": 12.367864693446089,
+        "avg_delivery_days": 23.77291691136168,
+        "avg_review": 3.909967845659164
+      },
+      {
+        "customer_state": "MT",
+        "orders": 886,
+        "late_pct": 6.772009029345373,
+        "avg_delivery_days": 18.05575601172561,
+        "avg_review": 4.146188850967008
+      },
+      {
+        "customer_state": "MA",
+        "orders": 717,
+        "late_pct": 19.665271966527197,
+        "avg_delivery_days": 21.572976474120562,
+        "avg_review": 3.833567415730337
+      }
+    ],
+    "late_by_state_worst_min200": [
+      {
+        "customer_state": "AL",
+        "orders": 397,
+        "late_pct": 23.929471032745592,
+        "avg_delivery_days": 24.543855361974067,
+        "avg_review": 3.8527918781725887
+      },
+      {
+        "customer_state": "MA",
+        "orders": 717,
+        "late_pct": 19.665271966527197,
+        "avg_delivery_days": 21.572976474120562,
+        "avg_review": 3.833567415730337
+      },
+      {
+        "customer_state": "PI",
+        "orders": 476,
+        "late_pct": 15.966386554621847,
+        "avg_delivery_days": 19.45709826291628,
+        "avg_review": 3.9936305732484074
+      },
+      {
+        "customer_state": "CE",
+        "orders": 1279,
+        "late_pct": 15.32447224394058,
+        "avg_delivery_days": 21.26657863492891,
+        "avg_review": 3.941869599371563
+      },
+      {
+        "customer_state": "SE",
+        "orders": 335,
+        "late_pct": 15.223880597014924,
+        "avg_delivery_days": 21.519788280818133,
+        "avg_review": 3.907185628742515
+      },
+      {
+        "customer_state": "BA",
+        "orders": 3256,
+        "late_pct": 14.035626535626536,
+        "avg_delivery_days": 19.335465824489262,
+        "avg_review": 3.930009290802106
+      },
+      {
+        "customer_state": "RJ",
+        "orders": 12350,
+        "late_pct": 13.473684210526315,
+        "avg_delivery_days": 15.30943754217274,
+        "avg_review": 3.965140720115743
+      },
+      {
+        "customer_state": "TO",
+        "orders": 274,
+        "late_pct": 12.773722627737227,
+        "avg_delivery_days": 17.65806260982698,
+        "avg_review": 4.153846153846154
+      },
+      {
+        "customer_state": "PA",
+        "orders": 946,
+        "late_pct": 12.367864693446089,
+        "avg_delivery_days": 23.77291691136168,
+        "avg_review": 3.909967845659164
+      },
+      {
+        "customer_state": "ES",
+        "orders": 1995,
+        "late_pct": 12.230576441102757,
+        "avg_delivery_days": 15.789307110368513,
+        "avg_review": 4.079735906551549
+      }
+    ],
+    "review_score_late": 2.566505678109907,
+    "review_score_ontime": 4.294292012144172,
+    "late_review_correlation": -0.36506419461331346
+  },
+  "product": {
+    "top_categories": [
+      {
+        "category": "health_beauty",
+        "merchandise_revenue": 1233131.72,
+        "freight": 179139.43,
+        "order_items": 9465,
+        "orders": 8647,
+        "total_order_value": 1412271.15,
+        "revenue_share_pct": 9.32671706141476,
+        "avg_freight_per_item": 18.926511357633384,
+        "freight_to_price_ratio": 0.1452719341288212
+      },
+      {
+        "category": "watches_gifts",
+        "merchandise_revenue": 1166176.98,
+        "freight": 98156.14,
+        "order_items": 5859,
+        "orders": 5495,
+        "total_order_value": 1264333.1199999999,
+        "revenue_share_pct": 8.82030894152584,
+        "avg_freight_per_item": 16.75305342208568,
+        "freight_to_price_ratio": 0.08416916272862804
+      },
+      {
+        "category": "bed_bath_table",
+        "merchandise_revenue": 1023434.76,
+        "freight": 201774.5,
+        "order_items": 10953,
+        "orders": 9272,
+        "total_order_value": 1225209.26,
+        "revenue_share_pct": 7.740686807843139,
+        "avg_freight_per_item": 18.42184789555373,
+        "freight_to_price_ratio": 0.1971542377552234
+      },
+      {
+        "category": "sports_leisure",
+        "merchandise_revenue": 954852.55,
+        "freight": 165071.08,
+        "order_items": 8431,
+        "orders": 7530,
+        "total_order_value": 1119923.6300000001,
+        "revenue_share_pct": 7.221969417200938,
+        "avg_freight_per_item": 19.579062981852687,
+        "freight_to_price_ratio": 0.17287599012014995
+      },
+      {
+        "category": "computers_accessories",
+        "merchandise_revenue": 888724.61,
+        "freight": 143999.16,
+        "order_items": 7644,
+        "orders": 6530,
+        "total_order_value": 1032723.77,
+        "revenue_share_pct": 6.721814749024685,
+        "avg_freight_per_item": 18.838194662480376,
+        "freight_to_price_ratio": 0.16202900018713334
+      },
+      {
+        "category": "furniture_decor",
+        "merchandise_revenue": 711927.6900000001,
+        "freight": 169136.22,
+        "order_items": 8160,
+        "orders": 6307,
+        "total_order_value": 881063.91,
+        "revenue_share_pct": 5.384621954917028,
+        "avg_freight_per_item": 20.72747794117647,
+        "freight_to_price_ratio": 0.2375749986631367
+      },
+      {
+        "category": "housewares",
+        "merchandise_revenue": 615628.69,
+        "freight": 143684.6,
+        "order_items": 6795,
+        "orders": 5743,
+        "total_order_value": 759313.2899999999,
+        "revenue_share_pct": 4.656270302185899,
+        "avg_freight_per_item": 21.14563649742458,
+        "freight_to_price_ratio": 0.23339490562078907
+      },
+      {
+        "category": "cool_stuff",
+        "merchandise_revenue": 610204.1,
+        "freight": 81476.79,
+        "order_items": 3718,
+        "orders": 3559,
+        "total_order_value": 691680.89,
+        "revenue_share_pct": 4.615241744341178,
+        "avg_freight_per_item": 21.914144701452393,
+        "freight_to_price_ratio": 0.13352383243573748
+      },
+      {
+        "category": "auto",
+        "merchandise_revenue": 578966.65,
+        "freight": 90593.22,
+        "order_items": 4140,
+        "orders": 3810,
+        "total_order_value": 669559.87,
+        "revenue_share_pct": 4.378979183622937,
+        "avg_freight_per_item": 21.882420289855073,
+        "freight_to_price_ratio": 0.15647398688680944
+      },
+      {
+        "category": "toys",
+        "merchandise_revenue": 471286.48,
+        "freight": 76560.05,
+        "order_items": 4030,
+        "orders": 3804,
+        "total_order_value": 547846.53,
+        "revenue_share_pct": 3.5645467410651848,
+        "avg_freight_per_item": 18.997531017369727,
+        "freight_to_price_ratio": 0.16244906919460114
+      },
+      {
+        "category": "garden_tools",
+        "merchandise_revenue": 470495.27999999997,
+        "freight": 96858.83,
+        "order_items": 4268,
+        "orders": 3448,
+        "total_order_value": 567354.11,
+        "revenue_share_pct": 3.5585625477958787,
+        "avg_freight_per_item": 22.694196344892223,
+        "freight_to_price_ratio": 0.20586567839745387
+      },
+      {
+        "category": "baby",
+        "merchandise_revenue": 400421.84,
+        "freight": 66305.81,
+        "order_items": 2982,
+        "orders": 2809,
+        "total_order_value": 466727.65,
+        "revenue_share_pct": 3.0285663293870106,
+        "avg_freight_per_item": 22.235348759222,
+        "freight_to_price_ratio": 0.16558989389789527
+      },
+      {
+        "category": "perfumery",
+        "merchandise_revenue": 390144.65,
+        "freight": 53026.98,
+        "order_items": 3340,
+        "orders": 3086,
+        "total_order_value": 443171.63,
+        "revenue_share_pct": 2.9508354254115607,
+        "avg_freight_per_item": 15.87634131736527,
+        "freight_to_price_ratio": 0.13591620441290173
+      },
+      {
+        "category": "telephony",
+        "merchandise_revenue": 309860.23,
+        "freight": 69342.39,
+        "order_items": 4430,
+        "orders": 4093,
+        "total_order_value": 379202.62,
+        "revenue_share_pct": 2.3436090783512578,
+        "avg_freight_per_item": 15.652909706546275,
+        "freight_to_price_ratio": 0.22378602765511407
+      },
+      {
+        "category": "office_furniture",
+        "merchandise_revenue": 268154.31,
+        "freight": 67057.05,
+        "order_items": 1668,
+        "orders": 1254,
+        "total_order_value": 335211.36,
+        "revenue_share_pct": 2.0281688789652597,
+        "avg_freight_per_item": 40.202068345323745,
+        "freight_to_price_ratio": 0.2500688875744716
+      }
+    ],
+    "bottom_categories": [
+      {
+        "category": "security_and_services",
+        "merchandise_revenue": 283.28999999999996,
+        "freight": 41.22,
+        "order_items": 2,
+        "orders": 2,
+        "total_order_value": 324.51,
+        "revenue_share_pct": 0.0021426467533640177,
+        "avg_freight_per_item": 20.61,
+        "freight_to_price_ratio": 0.14550460658688977
+      },
+      {
+        "category": "fashion_childrens_clothes",
+        "merchandise_revenue": 519.95,
+        "freight": 78.72,
+        "order_items": 7,
+        "orders": 7,
+        "total_order_value": 598.6700000000001,
+        "revenue_share_pct": 0.003932610326561549,
+        "avg_freight_per_item": 11.245714285714286,
+        "freight_to_price_ratio": 0.15139917299740357
+      },
+      {
+        "category": "cds_dvds_musicals",
+        "merchandise_revenue": 730.0,
+        "freight": 224.98999999999998,
+        "order_items": 14,
+        "orders": 12,
+        "total_order_value": 954.99,
+        "revenue_share_pct": 0.005521310776786095,
+        "avg_freight_per_item": 16.070714285714285,
+        "freight_to_price_ratio": 0.3082054794520548
+      },
+      {
+        "category": "home_comfort_2",
+        "merchandise_revenue": 760.27,
+        "freight": 410.31,
+        "order_items": 30,
+        "orders": 24,
+        "total_order_value": 1170.58,
+        "revenue_share_pct": 0.0057502560880372125,
+        "avg_freight_per_item": 13.677,
+        "freight_to_price_ratio": 0.5396898470280296
+      },
+      {
+        "category": "flowers",
+        "merchandise_revenue": 1110.04,
+        "freight": 488.87,
+        "order_items": 33,
+        "orders": 29,
+        "total_order_value": 1598.9099999999999,
+        "revenue_share_pct": 0.008395720294059777,
+        "avg_freight_per_item": 14.814242424242424,
+        "freight_to_price_ratio": 0.44040755288097727
+      },
+      {
+        "category": "pc_gamer",
+        "merchandise_revenue": 1306.95,
+        "freight": 123.14999999999999,
+        "order_items": 8,
+        "orders": 7,
+        "total_order_value": 1430.1000000000001,
+        "revenue_share_pct": 0.009885037150302175,
+        "avg_freight_per_item": 15.393749999999999,
+        "freight_to_price_ratio": 0.09422701710088373
+      },
+      {
+        "category": "diapers_and_hygiene",
+        "merchandise_revenue": 1500.79,
+        "freight": 545.4,
+        "order_items": 37,
+        "orders": 25,
+        "total_order_value": 2046.19,
+        "revenue_share_pct": 0.011351134247524389,
+        "avg_freight_per_item": 14.74054054054054,
+        "freight_to_price_ratio": 0.3634086048014712
+      },
+      {
+        "category": "arts_and_craftmanship",
+        "merchandise_revenue": 1814.01,
+        "freight": 370.13,
+        "order_items": 24,
+        "orders": 23,
+        "total_order_value": 2184.14,
+        "revenue_share_pct": 0.013720154742736636,
+        "avg_freight_per_item": 15.422083333333333,
+        "freight_to_price_ratio": 0.2040396690205677
+      },
+      {
+        "category": "la_cuisine",
+        "merchandise_revenue": 2054.99,
+        "freight": 333.55,
+        "order_items": 14,
+        "orders": 13,
+        "total_order_value": 2388.54,
+        "revenue_share_pct": 0.015542792374229668,
+        "avg_freight_per_item": 23.825,
+        "freight_to_price_ratio": 0.1623122253636271
+      },
+      {
+        "category": "fashion_sport",
+        "merchandise_revenue": 2094.52,
+        "freight": 563.03,
+        "order_items": 29,
+        "orders": 26,
+        "total_order_value": 2657.55,
+        "revenue_share_pct": 0.015841775134512345,
+        "avg_freight_per_item": 19.414827586206897,
+        "freight_to_price_ratio": 0.2688109924947004
+      }
+    ],
+    "high_freight_ratio_categories": [
+      {
+        "category": "home_comfort_2",
+        "merchandise_revenue": 760.27,
+        "freight": 410.31,
+        "order_items": 30,
+        "orders": 24,
+        "total_order_value": 1170.58,
+        "revenue_share_pct": 0.0057502560880372125,
+        "avg_freight_per_item": 13.677,
+        "freight_to_price_ratio": 0.5396898470280296
+      },
+      {
+        "category": "flowers",
+        "merchandise_revenue": 1110.04,
+        "freight": 488.87,
+        "order_items": 33,
+        "orders": 29,
+        "total_order_value": 1598.9099999999999,
+        "revenue_share_pct": 0.008395720294059777,
+        "avg_freight_per_item": 14.814242424242424,
+        "freight_to_price_ratio": 0.44040755288097727
+      },
+      {
+        "category": "furniture_mattress_and_upholstery",
+        "merchandise_revenue": 4323.38,
+        "freight": 1581.37,
+        "order_items": 37,
+        "orders": 37,
+        "total_order_value": 5904.75,
+        "revenue_share_pct": 0.03269962272074174,
+        "avg_freight_per_item": 42.739729729729724,
+        "freight_to_price_ratio": 0.36577168789234343
+      },
+      {
+        "category": "christmas_supplies",
+        "merchandise_revenue": 8737.84,
+        "freight": 3190.91,
+        "order_items": 150,
+        "orders": 125,
+        "total_order_value": 11928.75,
+        "revenue_share_pct": 0.0660881235038803,
+        "avg_freight_per_item": 21.27273333333333,
+        "freight_to_price_ratio": 0.36518292850406964
+      },
+      {
+        "category": "diapers_and_hygiene",
+        "merchandise_revenue": 1500.79,
+        "freight": 545.4,
+        "order_items": 37,
+        "orders": 25,
+        "total_order_value": 2046.19,
+        "revenue_share_pct": 0.011351134247524389,
+        "avg_freight_per_item": 14.74054054054054,
+        "freight_to_price_ratio": 0.3634086048014712
+      },
+      {
+        "category": "cds_dvds_musicals",
+        "merchandise_revenue": 730.0,
+        "freight": 224.98999999999998,
+        "order_items": 14,
+        "orders": 12,
+        "total_order_value": 954.99,
+        "revenue_share_pct": 0.005521310776786095,
+        "avg_freight_per_item": 16.070714285714285,
+        "freight_to_price_ratio": 0.3082054794520548
+      },
+      {
+        "category": "signaling_and_security",
+        "merchandise_revenue": 21315.05,
+        "freight": 6477.54,
+        "order_items": 197,
+        "orders": 138,
+        "total_order_value": 27792.59,
+        "revenue_share_pct": 0.16121508941470472,
+        "avg_freight_per_item": 32.88091370558376,
+        "freight_to_price_ratio": 0.30389513512752725
+      },
+      {
+        "category": "electronics",
+        "merchandise_revenue": 155043.93,
+        "freight": 45679.159999999996,
+        "order_items": 2729,
+        "orders": 2517,
+        "total_order_value": 200723.09,
+        "revenue_share_pct": 1.1726653720332452,
+        "avg_freight_per_item": 16.73842433125687,
+        "freight_to_price_ratio": 0.2946207568396905
+      },
+      {
+        "category": "food_drink",
+        "merchandise_revenue": 14942.88,
+        "freight": 4394.89,
+        "order_items": 269,
+        "orders": 221,
+        "total_order_value": 19337.77,
+        "revenue_share_pct": 0.11301956764413891,
+        "avg_freight_per_item": 16.337881040892196,
+        "freight_to_price_ratio": 0.2941126476288373
+      },
+      {
+        "category": "dvds_blu_ray",
+        "merchandise_revenue": 4542.59,
+        "freight": 1227.25,
+        "order_items": 61,
+        "orders": 56,
+        "total_order_value": 5769.84,
+        "revenue_share_pct": 0.034357604276055824,
+        "avg_freight_per_item": 20.118852459016395,
+        "freight_to_price_ratio": 0.2701652581456834
+      }
+    ],
+    "decline_comparison_periods": {
+      "period1_months": [
+        "2017-03",
+        "2017-04",
+        "2017-05",
+        "2017-06",
+        "2017-07",
+        "2017-08",
+        "2017-09",
+        "2017-10",
+        "2017-11"
+      ],
+      "period2_months": [
+        "2017-12",
+        "2018-01",
+        "2018-02",
+        "2018-03",
+        "2018-04",
+        "2018-05",
+        "2018-06",
+        "2018-07",
+        "2018-08"
+      ]
+    },
+    "declining_categories": [
+      {
+        "category": "computers",
+        "period1": 133790.81,
+        "period2": 79144.34,
+        "change_pct": -40.844711232408265
+      },
+      {
+        "category": "cool_stuff",
+        "period1": 324587.26,
+        "period2": 265259.27,
+        "change_pct": -18.277978624299667
+      },
+      {
+        "category": "toys",
+        "period1": 230070.52,
+        "period2": 223187.83,
+        "change_pct": -2.9915566757531575
+      },
+      {
+        "category": "luggage_accessories",
+        "period1": 66967.8,
+        "period2": 69582.14,
+        "change_pct": 3.903876191244145
+      },
+      {
+        "category": "consoles_games",
+        "period1": 65192.71,
+        "period2": 70382.09,
+        "change_pct": 7.9600617921850425
+      },
+      {
+        "category": "garden_tools",
+        "period1": 210951.94,
+        "period2": 238981.89,
+        "change_pct": 13.28736298893483
+      },
+      {
+        "category": "unknown",
+        "period1": 74444.38,
+        "period2": 86091.61,
+        "change_pct": 15.64554637972671
+      },
+      {
+        "category": "small_appliances",
+        "period1": 80389.04,
+        "period2": 93452.71,
+        "change_pct": 16.250561021751242
+      },
+      {
+        "category": "perfumery",
+        "period1": 171341.63,
+        "period2": 200820.94,
+        "change_pct": 17.204989820629113
+      },
+      {
+        "category": "fashion_bags_accessories",
+        "period1": 65510.72,
+        "period2": 79592.19,
+        "change_pct": 21.494909535416497
+      }
+    ],
+    "growing_categories": [
+      {
+        "category": "stationery",
+        "period1": 62776.45,
+        "period2": 157108.85,
+        "change_pct": 150.2671782173092
+      },
+      {
+        "category": "housewares",
+        "period1": 183109.28,
+        "period2": 417109.42,
+        "change_pct": 127.79261651839819
+      },
+      {
+        "category": "baby",
+        "period1": 119720.94,
+        "period2": 270274.27,
+        "change_pct": 125.753548209695
+      },
+      {
+        "category": "health_beauty",
+        "period1": 378717.89,
+        "period2": 816413.25,
+        "change_pct": 115.57292949641223
+      },
+      {
+        "category": "auto",
+        "period1": 178351.32,
+        "period2": 382308.26,
+        "change_pct": 114.35684356022708
+      },
+      {
+        "category": "watches_gifts",
+        "period1": 386974.88,
+        "period2": 757412.12,
+        "change_pct": 95.7264306148244
+      },
+      {
+        "category": "pet_shop",
+        "period1": 72645.59,
+        "period2": 133976.38,
+        "change_pct": 84.42465674791822
+      },
+      {
+        "category": "musical_instruments",
+        "period1": 65103.94,
+        "period2": 116650.78,
+        "change_pct": 79.17622189993416
+      },
+      {
+        "category": "sports_leisure",
+        "period1": 352109.54000000004,
+        "period2": 575888.74,
+        "change_pct": 63.55385883608832
+      },
+      {
+        "category": "telephony",
+        "period1": 115278.54,
+        "period2": 186904.12,
+        "change_pct": 62.132622429118214
+      }
+    ]
+  },
+  "geography": {
+    "top_states_by_revenue": [
+      {
+        "customer_state": "SP",
+        "merchandise_revenue": 5067633.16,
+        "freight": 704080.77,
+        "orders": 40501,
+        "revenue_share_pct": 38.328736409735036
+      },
+      {
+        "customer_state": "RJ",
+        "merchandise_revenue": 1759651.1300000001,
+        "freight": 295984.99,
+        "orders": 12350,
+        "revenue_share_pct": 13.309014722538127
+      },
+      {
+        "customer_state": "MG",
+        "merchandise_revenue": 1552481.83,
+        "freight": 266875.73,
+        "orders": 11354,
+        "revenue_share_pct": 11.742102272251506
+      },
+      {
+        "customer_state": "RS",
+        "merchandise_revenue": 728897.47,
+        "freight": 132837.52,
+        "orders": 5345,
+        "revenue_share_pct": 5.512971857922082
+      },
+      {
+        "customer_state": "PR",
+        "merchandise_revenue": 666063.51,
+        "freight": 115787.5,
+        "orders": 4923,
+        "revenue_share_pct": 5.037731007927361
+      },
+      {
+        "customer_state": "SC",
+        "merchandise_revenue": 507012.13,
+        "freight": 88123.32,
+        "orders": 3546,
+        "revenue_share_pct": 3.834755530589415
+      },
+      {
+        "customer_state": "BA",
+        "merchandise_revenue": 493584.14,
+        "freight": 97553.67,
+        "orders": 3256,
+        "revenue_share_pct": 3.7331937416886256
+      },
+      {
+        "customer_state": "DF",
+        "merchandise_revenue": 296498.41,
+        "freight": 49930.5,
+        "orders": 2080,
+        "revenue_share_pct": 2.242547762236907
+      },
+      {
+        "customer_state": "GO",
+        "merchandise_revenue": 282836.7,
+        "freight": 51825.87,
+        "orders": 1957,
+        "revenue_share_pct": 2.139218246274816
+      },
+      {
+        "customer_state": "ES",
+        "merchandise_revenue": 268643.45,
+        "freight": 49058.2,
+        "orders": 1995,
+        "revenue_share_pct": 2.0318684597232832
+      },
+      {
+        "customer_state": "PE",
+        "merchandise_revenue": 251889.49,
+        "freight": 57389.3,
+        "orders": 1593,
+        "revenue_share_pct": 1.9051508982139087
+      },
+      {
+        "customer_state": "CE",
+        "merchandise_revenue": 219757.38,
+        "freight": 46835.83,
+        "orders": 1279,
+        "revenue_share_pct": 1.6621216307839415
+      }
+    ]
+  }
+}

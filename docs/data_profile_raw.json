@@ -1,0 +1,2106 @@
+{
+  "profiles": [
+    {
+      "filename": "olist_customers_dataset.csv",
+      "size_bytes": 8562270,
+      "row_count": 99441,
+      "column_count": 5,
+      "columns": [
+        "customer_id",
+        "customer_unique_id",
+        "customer_zip_code_prefix",
+        "customer_city",
+        "customer_state"
+      ],
+      "column_profiles": [
+        {
+          "name": "customer_id",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 99441,
+          "id_samples": [
+            "06b8999e2fba1a1fbc88172c00ba8bc7",
+            "18955e83d337fd6b2def6b18a428ac77",
+            "4e7b3e00288586ebd08712fdd0374a03"
+          ]
+        },
+        {
+          "name": "customer_unique_id",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 96096,
+          "id_samples": [
+            "861eff4711a542e4b93843c6dd7febb0",
+            "290c77bc529b7ac935b93aa66c333dc3",
+            "060e732b5b29e8181a18229c7b0b2b5e"
+          ]
+        },
+        {
+          "name": "customer_zip_code_prefix",
+          "inferred_dtype": "int",
+          "pandas_dtype": "int64",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 14995,
+          "id_samples": [
+            "14409",
+            "9790",
+            "1151"
+          ]
+        },
+        {
+          "name": "customer_city",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 4119
+        },
+        {
+          "name": "customer_state",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 27,
+          "top_values": [
+            {
+              "value": "SP",
+              "count": 41746
+            },
+            {
+              "value": "RJ",
+              "count": 12852
+            },
+            {
+              "value": "MG",
+              "count": 11635
+            },
+            {
+              "value": "RS",
+              "count": 5466
+            },
+            {
+              "value": "PR",
+              "count": 5045
+            },
+            {
+              "value": "SC",
+              "count": 3637
+            },
+            {
+              "value": "BA",
+              "count": 3380
+            },
+            {
+              "value": "DF",
+              "count": 2140
+            },
+            {
+              "value": "ES",
+              "count": 2033
+            },
+            {
+              "value": "GO",
+              "count": 2020
+            },
+            {
+              "value": "PE",
+              "count": 1652
+            },
+            {
+              "value": "CE",
+              "count": 1336
+            },
+            {
+              "value": "PA",
+              "count": 975
+            },
+            {
+              "value": "MT",
+              "count": 907
+            },
+            {
+              "value": "MA",
+              "count": 747
+            },
+            {
+              "value": "MS",
+              "count": 715
+            },
+            {
+              "value": "PB",
+              "count": 536
+            },
+            {
+              "value": "PI",
+              "count": 495
+            },
+            {
+              "value": "RN",
+              "count": 485
+            },
+            {
+              "value": "AL",
+              "count": 413
+            }
+          ],
+          "distinct_count": 27
+        }
+      ],
+      "uniqueness": {
+        "customer_id": {
+          "unique_count": 99441,
+          "row_count": 99441,
+          "is_unique": true,
+          "duplicate_rows": 0,
+          "nulls": 0
+        },
+        "customer_unique_id": {
+          "unique_count": 96096,
+          "row_count": 99441,
+          "is_unique": false,
+          "nulls": 0
+        },
+        "customer_zip_code_prefix": {
+          "unique_count": 14995,
+          "row_count": 99441,
+          "is_unique": false,
+          "duplicate_rows": 84446,
+          "nulls": 0
+        }
+      },
+      "full_duplicate_rows": 0
+    },
+    {
+      "filename": "olist_geolocation_dataset.csv",
+      "size_bytes": 61273883,
+      "row_count": 1000163,
+      "column_count": 5,
+      "columns": [
+        "geolocation_zip_code_prefix",
+        "geolocation_lat",
+        "geolocation_lng",
+        "geolocation_city",
+        "geolocation_state"
+      ],
+      "column_profiles": [
+        {
+          "name": "geolocation_zip_code_prefix",
+          "inferred_dtype": "int",
+          "pandas_dtype": "int64",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 19015,
+          "id_samples": [
+            "1037",
+            "1046",
+            "1046"
+          ]
+        },
+        {
+          "name": "geolocation_lat",
+          "inferred_dtype": "float",
+          "pandas_dtype": "float64",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 717360
+        },
+        {
+          "name": "geolocation_lng",
+          "inferred_dtype": "float",
+          "pandas_dtype": "float64",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 717613
+        },
+        {
+          "name": "geolocation_city",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 8011
+        },
+        {
+          "name": "geolocation_state",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 27,
+          "top_values": [
+            {
+              "value": "SP",
+              "count": 404268
+            },
+            {
+              "value": "MG",
+              "count": 126336
+            },
+            {
+              "value": "RJ",
+              "count": 121169
+            },
+            {
+              "value": "RS",
+              "count": 61851
+            },
+            {
+              "value": "PR",
+              "count": 57859
+            },
+            {
+              "value": "SC",
+              "count": 38328
+            },
+            {
+              "value": "BA",
+              "count": 36045
+            },
+            {
+              "value": "GO",
+              "count": 20139
+            },
+            {
+              "value": "ES",
+              "count": 16748
+            },
+            {
+              "value": "PE",
+              "count": 16432
+            },
+            {
+              "value": "DF",
+              "count": 12986
+            },
+            {
+              "value": "MT",
+              "count": 12031
+            },
+            {
+              "value": "CE",
+              "count": 11674
+            },
+            {
+              "value": "PA",
+              "count": 10853
+            },
+            {
+              "value": "MS",
+              "count": 10431
+            },
+            {
+              "value": "MA",
+              "count": 7853
+            },
+            {
+              "value": "PB",
+              "count": 5538
+            },
+            {
+              "value": "RN",
+              "count": 5041
+            },
+            {
+              "value": "PI",
+              "count": 4549
+            },
+            {
+              "value": "AL",
+              "count": 4183
+            }
+          ],
+          "distinct_count": 27
+        }
+      ],
+      "uniqueness": {
+        "geolocation_zip_code_prefix": {
+          "unique_count": 19015,
+          "row_count": 1000163,
+          "is_unique": false,
+          "duplicate_rows": 981148,
+          "nulls": 0
+        },
+        "geolocation_zip_code_prefix|geolocation_lat|geolocation_lng": {
+          "unique_count": 720154,
+          "row_count": 1000163,
+          "is_unique": false,
+          "duplicate_rows": 280009
+        },
+        "geolocation_zip_code_prefix_multiplicity": {
+          "unique_prefixes": 19015,
+          "row_count": 1000163,
+          "prefixes_with_multiple_rows": 17972,
+          "max_rows_per_prefix": 1146,
+          "mean_rows_per_prefix": 52.6
+        }
+      },
+      "full_duplicate_rows": 261831
+    },
+    {
+      "filename": "olist_order_items_dataset.csv",
+      "size_bytes": 15007623,
+      "row_count": 112650,
+      "column_count": 7,
+      "columns": [
+        "order_id",
+        "order_item_id",
+        "product_id",
+        "seller_id",
+        "shipping_limit_date",
+        "price",
+        "freight_value"
+      ],
+      "column_profiles": [
+        {
+          "name": "order_id",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 98666,
+          "id_samples": [
+            "00010242fe8c5a6d1ba2dd792cb16214",
+            "00018f77f2f0320c557190d7a144bdd3",
+            "000229ec398224ef6ca0657da4fc703e"
+          ]
+        },
+        {
+          "name": "order_item_id",
+          "inferred_dtype": "int",
+          "pandas_dtype": "int64",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 21,
+          "id_samples": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        {
+          "name": "product_id",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 32951,
+          "id_samples": [
+            "4244733e06e7ecb4970a6e2683c13e61",
+            "e5f2d52b802189ee658865ca93d83a8f",
+            "c777355d18b72b67abbeef9df44fd0fd"
+          ]
+        },
+        {
+          "name": "seller_id",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 3095,
+          "id_samples": [
+            "48436dade18ac8b2bce089ec2a041202",
+            "dd7ddc04e1b6c2c614352b383efe2d36",
+            "5b51032eddd242adc84c38acab88f23d"
+          ]
+        },
+        {
+          "name": "shipping_limit_date",
+          "inferred_dtype": "datetime (provisional)",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 93318,
+          "timestamp": {
+            "min": "2016-09-19 00:15:34",
+            "max": "2020-04-09 22:35:08",
+            "parseable": 112650,
+            "unparseable_non_null": 0,
+            "raw_non_null": 112650
+          }
+        },
+        {
+          "name": "price",
+          "inferred_dtype": "float",
+          "pandas_dtype": "float64",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 5968
+        },
+        {
+          "name": "freight_value",
+          "inferred_dtype": "float",
+          "pandas_dtype": "float64",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 7010
+        }
+      ],
+      "uniqueness": {
+        "order_id": {
+          "unique_count": 98666,
+          "row_count": 112650,
+          "is_unique": false,
+          "duplicate_rows": 13984,
+          "nulls": 0
+        },
+        "order_item_id": {
+          "unique_count": 21,
+          "row_count": 112650,
+          "is_unique": false,
+          "duplicate_rows": 112629,
+          "nulls": 0
+        },
+        "product_id": {
+          "unique_count": 32951,
+          "row_count": 112650,
+          "is_unique": false,
+          "duplicate_rows": 79699,
+          "nulls": 0
+        },
+        "seller_id": {
+          "unique_count": 3095,
+          "row_count": 112650,
+          "is_unique": false,
+          "duplicate_rows": 109555,
+          "nulls": 0
+        },
+        "order_id|order_item_id": {
+          "unique_count": 112650,
+          "row_count": 112650,
+          "is_unique": true,
+          "duplicate_rows": 0
+        }
+      },
+      "full_duplicate_rows": 0
+    },
+    {
+      "filename": "olist_order_payments_dataset.csv",
+      "size_bytes": 5647783,
+      "row_count": 103886,
+      "column_count": 5,
+      "columns": [
+        "order_id",
+        "payment_sequential",
+        "payment_type",
+        "payment_installments",
+        "payment_value"
+      ],
+      "column_profiles": [
+        {
+          "name": "order_id",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 99440,
+          "id_samples": [
+            "b81ef226f3fe1789b1e8b2acac839d17",
+            "a9810da82917af2d9aefd1278f1dcfa0",
+            "25e8ea4e93396b6fa0d3dd708e76c1bd"
+          ]
+        },
+        {
+          "name": "payment_sequential",
+          "inferred_dtype": "int",
+          "pandas_dtype": "int64",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 29,
+          "top_values": [
+            {
+              "value": "1",
+              "count": 99360
+            },
+            {
+              "value": "2",
+              "count": 3039
+            },
+            {
+              "value": "3",
+              "count": 581
+            },
+            {
+              "value": "4",
+              "count": 278
+            },
+            {
+              "value": "5",
+              "count": 170
+            },
+            {
+              "value": "6",
+              "count": 118
+            },
+            {
+              "value": "7",
+              "count": 82
+            },
+            {
+              "value": "8",
+              "count": 54
+            },
+            {
+              "value": "9",
+              "count": 43
+            },
+            {
+              "value": "10",
+              "count": 34
+            },
+            {
+              "value": "11",
+              "count": 29
+            },
+            {
+              "value": "12",
+              "count": 21
+            },
+            {
+              "value": "13",
+              "count": 13
+            },
+            {
+              "value": "14",
+              "count": 10
+            },
+            {
+              "value": "15",
+              "count": 8
+            },
+            {
+              "value": "17",
+              "count": 6
+            },
+            {
+              "value": "19",
+              "count": 6
+            },
+            {
+              "value": "18",
+              "count": 6
+            },
+            {
+              "value": "16",
+              "count": 6
+            },
+            {
+              "value": "20",
+              "count": 4
+            }
+          ],
+          "distinct_count": 29
+        },
+        {
+          "name": "payment_type",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 5,
+          "top_values": [
+            {
+              "value": "credit_card",
+              "count": 76795
+            },
+            {
+              "value": "boleto",
+              "count": 19784
+            },
+            {
+              "value": "voucher",
+              "count": 5775
+            },
+            {
+              "value": "debit_card",
+              "count": 1529
+            },
+            {
+              "value": "not_defined",
+              "count": 3
+            }
+          ],
+          "distinct_count": 5
+        },
+        {
+          "name": "payment_installments",
+          "inferred_dtype": "int",
+          "pandas_dtype": "int64",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 24,
+          "top_values": [
+            {
+              "value": "1",
+              "count": 52543
+            },
+            {
+              "value": "2",
+              "count": 12413
+            },
+            {
+              "value": "3",
+              "count": 10461
+            },
+            {
+              "value": "4",
+              "count": 7098
+            },
+            {
+              "value": "10",
+              "count": 5331
+            },
+            {
+              "value": "5",
+              "count": 5239
+            },
+            {
+              "value": "8",
+              "count": 4268
+            },
+            {
+              "value": "6",
+              "count": 3920
+            },
+            {
+              "value": "7",
+              "count": 1626
+            },
+            {
+              "value": "9",
+              "count": 644
+            },
+            {
+              "value": "12",
+              "count": 133
+            },
+            {
+              "value": "15",
+              "count": 74
+            },
+            {
+              "value": "18",
+              "count": 27
+            },
+            {
+              "value": "11",
+              "count": 23
+            },
+            {
+              "value": "24",
+              "count": 18
+            },
+            {
+              "value": "20",
+              "count": 17
+            },
+            {
+              "value": "13",
+              "count": 16
+            },
+            {
+              "value": "14",
+              "count": 15
+            },
+            {
+              "value": "17",
+              "count": 8
+            },
+            {
+              "value": "16",
+              "count": 5
+            }
+          ],
+          "distinct_count": 24
+        },
+        {
+          "name": "payment_value",
+          "inferred_dtype": "float",
+          "pandas_dtype": "float64",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 29077
+        }
+      ],
+      "uniqueness": {
+        "order_id": {
+          "unique_count": 99440,
+          "row_count": 103886,
+          "is_unique": false,
+          "duplicate_rows": 4446,
+          "nulls": 0
+        },
+        "order_id|payment_sequential": {
+          "unique_count": 103886,
+          "row_count": 103886,
+          "is_unique": true,
+          "duplicate_rows": 0
+        },
+        "order_id_as_key": {
+          "unique_count": 99440,
+          "row_count": 103886,
+          "is_unique": false,
+          "orders_with_multiple_payments": 2961
+        }
+      },
+      "full_duplicate_rows": 0
+    },
+    {
+      "filename": "olist_order_reviews_dataset.csv",
+      "size_bytes": 14451670,
+      "row_count": 99224,
+      "column_count": 7,
+      "columns": [
+        "review_id",
+        "order_id",
+        "review_score",
+        "review_comment_title",
+        "review_comment_message",
+        "review_creation_date",
+        "review_answer_timestamp"
+      ],
+      "column_profiles": [
+        {
+          "name": "review_id",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 98410,
+          "id_samples": [
+            "7bc2406110b926393aa56f80a40eba40",
+            "80e641a11e56f04c1ad469d5645fdfde",
+            "228ce5500dc1d8e020d8d1322874b6f0"
+          ]
+        },
+        {
+          "name": "order_id",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 98673,
+          "id_samples": [
+            "73fc7af87114b39712e6da79b0a377eb",
+            "a548910a1c6147796b98fdf73dbeba33",
+            "f9e4b658b201a9f2ecdecbb34bed034b"
+          ]
+        },
+        {
+          "name": "review_score",
+          "inferred_dtype": "int",
+          "pandas_dtype": "int64",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 5,
+          "top_values": [
+            {
+              "value": "5",
+              "count": 57328
+            },
+            {
+              "value": "4",
+              "count": 19142
+            },
+            {
+              "value": "1",
+              "count": 11424
+            },
+            {
+              "value": "3",
+              "count": 8179
+            },
+            {
+              "value": "2",
+              "count": 3151
+            }
+          ],
+          "distinct_count": 5
+        },
+        {
+          "name": "review_comment_title",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 87658,
+          "null_rate": 0.883435,
+          "nunique": 4527
+        },
+        {
+          "name": "review_comment_message",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 58274,
+          "null_rate": 0.587297,
+          "nunique": 36159
+        },
+        {
+          "name": "review_creation_date",
+          "inferred_dtype": "datetime (provisional)",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 636,
+          "timestamp": {
+            "min": "2016-10-02 00:00:00",
+            "max": "2018-08-31 00:00:00",
+            "parseable": 99224,
+            "unparseable_non_null": 0,
+            "raw_non_null": 99224
+          }
+        },
+        {
+          "name": "review_answer_timestamp",
+          "inferred_dtype": "datetime (provisional)",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 98248,
+          "timestamp": {
+            "min": "2016-10-07 18:32:28",
+            "max": "2018-10-29 12:27:35",
+            "parseable": 99224,
+            "unparseable_non_null": 0,
+            "raw_non_null": 99224
+          }
+        }
+      ],
+      "uniqueness": {
+        "review_id": {
+          "unique_count": 98410,
+          "row_count": 99224,
+          "is_unique": false,
+          "duplicate_rows": 814
+        },
+        "order_id": {
+          "unique_count": 98673,
+          "row_count": 99224,
+          "is_unique": false,
+          "duplicate_rows": 551,
+          "nulls": 0
+        },
+        "order_id_as_key": {
+          "unique_count": 98673,
+          "row_count": 99224,
+          "is_unique": false,
+          "orders_with_multiple_reviews": 547
+        },
+        "review_id_duplicate_detail": {
+          "unique_count": 98410,
+          "row_count": 99224,
+          "is_unique": false,
+          "review_ids_with_multiple_rows": 789,
+          "review_ids_spanning_multiple_order_ids": 789
+        }
+      },
+      "full_duplicate_rows": 0
+    },
+    {
+      "filename": "olist_orders_dataset.csv",
+      "size_bytes": 17654914,
+      "row_count": 99441,
+      "column_count": 8,
+      "columns": [
+        "order_id",
+        "customer_id",
+        "order_status",
+        "order_purchase_timestamp",
+        "order_approved_at",
+        "order_delivered_carrier_date",
+        "order_delivered_customer_date",
+        "order_estimated_delivery_date"
+      ],
+      "column_profiles": [
+        {
+          "name": "order_id",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 99441,
+          "id_samples": [
+            "e481f51cbdc54678b7cc49136f2d6af7",
+            "53cdb2fc8bc7dce0b6741e2150273451",
+            "47770eb9100c2d0c44946d9cf07ec65d"
+          ]
+        },
+        {
+          "name": "customer_id",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 99441,
+          "id_samples": [
+            "9ef432eb6251297304e76186b10a928d",
+            "b0830fb4747a6c6d20dea0b8c802d7ef",
+            "41ce2a54c0b03bf3443c3d931a367089"
+          ]
+        },
+        {
+          "name": "order_status",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 8,
+          "top_values": [
+            {
+              "value": "delivered",
+              "count": 96478
+            },
+            {
+              "value": "shipped",
+              "count": 1107
+            },
+            {
+              "value": "canceled",
+              "count": 625
+            },
+            {
+              "value": "unavailable",
+              "count": 609
+            },
+            {
+              "value": "invoiced",
+              "count": 314
+            },
+            {
+              "value": "processing",
+              "count": 301
+            },
+            {
+              "value": "created",
+              "count": 5
+            },
+            {
+              "value": "approved",
+              "count": 2
+            }
+          ],
+          "distinct_count": 8
+        },
+        {
+          "name": "order_purchase_timestamp",
+          "inferred_dtype": "datetime (provisional)",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 98875,
+          "timestamp": {
+            "min": "2016-09-04 21:15:19",
+            "max": "2018-10-17 17:30:18",
+            "parseable": 99441,
+            "unparseable_non_null": 0,
+            "raw_non_null": 99441
+          }
+        },
+        {
+          "name": "order_approved_at",
+          "inferred_dtype": "datetime (provisional)",
+          "pandas_dtype": "object",
+          "null_count": 160,
+          "null_rate": 0.001609,
+          "nunique": 90733,
+          "timestamp": {
+            "min": "2016-09-15 12:16:38",
+            "max": "2018-09-03 17:40:06",
+            "parseable": 99281,
+            "unparseable_non_null": 0,
+            "raw_non_null": 99281
+          }
+        },
+        {
+          "name": "order_delivered_carrier_date",
+          "inferred_dtype": "datetime (provisional)",
+          "pandas_dtype": "object",
+          "null_count": 1783,
+          "null_rate": 0.01793,
+          "nunique": 81018,
+          "timestamp": {
+            "min": "2016-10-08 10:34:01",
+            "max": "2018-09-11 19:48:28",
+            "parseable": 97658,
+            "unparseable_non_null": 0,
+            "raw_non_null": 97658
+          }
+        },
+        {
+          "name": "order_delivered_customer_date",
+          "inferred_dtype": "datetime (provisional)",
+          "pandas_dtype": "object",
+          "null_count": 2965,
+          "null_rate": 0.029817,
+          "nunique": 95664,
+          "timestamp": {
+            "min": "2016-10-11 13:46:32",
+            "max": "2018-10-17 13:22:46",
+            "parseable": 96476,
+            "unparseable_non_null": 0,
+            "raw_non_null": 96476
+          }
+        },
+        {
+          "name": "order_estimated_delivery_date",
+          "inferred_dtype": "datetime (provisional)",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 459,
+          "timestamp": {
+            "min": "2016-09-30 00:00:00",
+            "max": "2018-11-12 00:00:00",
+            "parseable": 99441,
+            "unparseable_non_null": 0,
+            "raw_non_null": 99441
+          }
+        }
+      ],
+      "uniqueness": {
+        "order_id": {
+          "unique_count": 99441,
+          "row_count": 99441,
+          "is_unique": true,
+          "duplicate_rows": 0,
+          "nulls": 0
+        },
+        "customer_id": {
+          "unique_count": 99441,
+          "row_count": 99441,
+          "is_unique": true,
+          "duplicate_rows": 0,
+          "nulls": 0
+        }
+      },
+      "full_duplicate_rows": 0
+    },
+    {
+      "filename": "olist_products_dataset.csv",
+      "size_bytes": 2379446,
+      "row_count": 32951,
+      "column_count": 9,
+      "columns": [
+        "product_id",
+        "product_category_name",
+        "product_name_lenght",
+        "product_description_lenght",
+        "product_photos_qty",
+        "product_weight_g",
+        "product_length_cm",
+        "product_height_cm",
+        "product_width_cm"
+      ],
+      "column_profiles": [
+        {
+          "name": "product_id",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 32951,
+          "id_samples": [
+            "1e9e8ef04dbcff4541ed26657ea517e5",
+            "3aa071139cb16b67ca9e5dea641aaa2f",
+            "96bd76ec8810374ed1b65e291975717f"
+          ]
+        },
+        {
+          "name": "product_category_name",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 610,
+          "null_rate": 0.018512,
+          "nunique": 73,
+          "top_values": [
+            {
+              "value": "cama_mesa_banho",
+              "count": 3029
+            },
+            {
+              "value": "esporte_lazer",
+              "count": 2867
+            },
+            {
+              "value": "moveis_decoracao",
+              "count": 2657
+            },
+            {
+              "value": "beleza_saude",
+              "count": 2444
+            },
+            {
+              "value": "utilidades_domesticas",
+              "count": 2335
+            },
+            {
+              "value": "automotivo",
+              "count": 1900
+            },
+            {
+              "value": "informatica_acessorios",
+              "count": 1639
+            },
+            {
+              "value": "brinquedos",
+              "count": 1411
+            },
+            {
+              "value": "relogios_presentes",
+              "count": 1329
+            },
+            {
+              "value": "telefonia",
+              "count": 1134
+            },
+            {
+              "value": "bebes",
+              "count": 919
+            },
+            {
+              "value": "perfumaria",
+              "count": 868
+            },
+            {
+              "value": "papelaria",
+              "count": 849
+            },
+            {
+              "value": "fashion_bolsas_e_acessorios",
+              "count": 849
+            },
+            {
+              "value": "cool_stuff",
+              "count": 789
+            },
+            {
+              "value": "ferramentas_jardim",
+              "count": 753
+            },
+            {
+              "value": "pet_shop",
+              "count": 719
+            },
+            {
+              "value": null,
+              "count": 610
+            },
+            {
+              "value": "eletronicos",
+              "count": 517
+            },
+            {
+              "value": "construcao_ferramentas_construcao",
+              "count": 400
+            }
+          ],
+          "distinct_count": 73,
+          "id_samples": [
+            "perfumaria",
+            "artes",
+            "esporte_lazer"
+          ]
+        },
+        {
+          "name": "product_name_lenght",
+          "inferred_dtype": "float (nullable int-like)",
+          "pandas_dtype": "float64",
+          "null_count": 610,
+          "null_rate": 0.018512,
+          "nunique": 66
+        },
+        {
+          "name": "product_description_lenght",
+          "inferred_dtype": "float (nullable int-like)",
+          "pandas_dtype": "float64",
+          "null_count": 610,
+          "null_rate": 0.018512,
+          "nunique": 2960
+        },
+        {
+          "name": "product_photos_qty",
+          "inferred_dtype": "float (nullable int-like)",
+          "pandas_dtype": "float64",
+          "null_count": 610,
+          "null_rate": 0.018512,
+          "nunique": 19
+        },
+        {
+          "name": "product_weight_g",
+          "inferred_dtype": "float (nullable int-like)",
+          "pandas_dtype": "float64",
+          "null_count": 2,
+          "null_rate": 6.1e-05,
+          "nunique": 2204
+        },
+        {
+          "name": "product_length_cm",
+          "inferred_dtype": "float (nullable int-like)",
+          "pandas_dtype": "float64",
+          "null_count": 2,
+          "null_rate": 6.1e-05,
+          "nunique": 99
+        },
+        {
+          "name": "product_height_cm",
+          "inferred_dtype": "float (nullable int-like)",
+          "pandas_dtype": "float64",
+          "null_count": 2,
+          "null_rate": 6.1e-05,
+          "nunique": 102
+        },
+        {
+          "name": "product_width_cm",
+          "inferred_dtype": "float (nullable int-like)",
+          "pandas_dtype": "float64",
+          "null_count": 2,
+          "null_rate": 6.1e-05,
+          "nunique": 95
+        }
+      ],
+      "uniqueness": {
+        "product_id": {
+          "unique_count": 32951,
+          "row_count": 32951,
+          "is_unique": true,
+          "duplicate_rows": 0,
+          "nulls": 0
+        },
+        "product_category_name": {
+          "unique_count": 73,
+          "row_count": 32951,
+          "is_unique": false,
+          "duplicate_rows": null,
+          "nulls": 610
+        }
+      },
+      "full_duplicate_rows": 0
+    },
+    {
+      "filename": "olist_sellers_dataset.csv",
+      "size_bytes": 163589,
+      "row_count": 3095,
+      "column_count": 4,
+      "columns": [
+        "seller_id",
+        "seller_zip_code_prefix",
+        "seller_city",
+        "seller_state"
+      ],
+      "column_profiles": [
+        {
+          "name": "seller_id",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 3095,
+          "id_samples": [
+            "3442f8959a84dea7ee197c632cb2df15",
+            "d1b65fc7debc3361ea86b5f14c68d2e2",
+            "ce3ad9de960102d0677a81f5d0bb7b2d"
+          ]
+        },
+        {
+          "name": "seller_zip_code_prefix",
+          "inferred_dtype": "int",
+          "pandas_dtype": "int64",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 2246,
+          "id_samples": [
+            "13023",
+            "13844",
+            "20031"
+          ]
+        },
+        {
+          "name": "seller_city",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 611
+        },
+        {
+          "name": "seller_state",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 23,
+          "top_values": [
+            {
+              "value": "SP",
+              "count": 1849
+            },
+            {
+              "value": "PR",
+              "count": 349
+            },
+            {
+              "value": "MG",
+              "count": 244
+            },
+            {
+              "value": "SC",
+              "count": 190
+            },
+            {
+              "value": "RJ",
+              "count": 171
+            },
+            {
+              "value": "RS",
+              "count": 129
+            },
+            {
+              "value": "GO",
+              "count": 40
+            },
+            {
+              "value": "DF",
+              "count": 30
+            },
+            {
+              "value": "ES",
+              "count": 23
+            },
+            {
+              "value": "BA",
+              "count": 19
+            },
+            {
+              "value": "CE",
+              "count": 13
+            },
+            {
+              "value": "PE",
+              "count": 9
+            },
+            {
+              "value": "PB",
+              "count": 6
+            },
+            {
+              "value": "MS",
+              "count": 5
+            },
+            {
+              "value": "RN",
+              "count": 5
+            },
+            {
+              "value": "MT",
+              "count": 4
+            },
+            {
+              "value": "RO",
+              "count": 2
+            },
+            {
+              "value": "SE",
+              "count": 2
+            },
+            {
+              "value": "AC",
+              "count": 1
+            },
+            {
+              "value": "PI",
+              "count": 1
+            }
+          ],
+          "distinct_count": 23
+        }
+      ],
+      "uniqueness": {
+        "seller_id": {
+          "unique_count": 3095,
+          "row_count": 3095,
+          "is_unique": true,
+          "duplicate_rows": 0,
+          "nulls": 0
+        },
+        "seller_zip_code_prefix": {
+          "unique_count": 2246,
+          "row_count": 3095,
+          "is_unique": false,
+          "duplicate_rows": 849,
+          "nulls": 0
+        }
+      },
+      "full_duplicate_rows": 0
+    },
+    {
+      "filename": "product_category_name_translation.csv",
+      "size_bytes": 2613,
+      "row_count": 71,
+      "column_count": 2,
+      "columns": [
+        "product_category_name",
+        "product_category_name_english"
+      ],
+      "column_profiles": [
+        {
+          "name": "product_category_name",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 71,
+          "top_values": [
+            {
+              "value": "beleza_saude",
+              "count": 1
+            },
+            {
+              "value": "informatica_acessorios",
+              "count": 1
+            },
+            {
+              "value": "automotivo",
+              "count": 1
+            },
+            {
+              "value": "cama_mesa_banho",
+              "count": 1
+            },
+            {
+              "value": "moveis_decoracao",
+              "count": 1
+            },
+            {
+              "value": "esporte_lazer",
+              "count": 1
+            },
+            {
+              "value": "perfumaria",
+              "count": 1
+            },
+            {
+              "value": "utilidades_domesticas",
+              "count": 1
+            },
+            {
+              "value": "telefonia",
+              "count": 1
+            },
+            {
+              "value": "relogios_presentes",
+              "count": 1
+            },
+            {
+              "value": "alimentos_bebidas",
+              "count": 1
+            },
+            {
+              "value": "bebes",
+              "count": 1
+            },
+            {
+              "value": "papelaria",
+              "count": 1
+            },
+            {
+              "value": "tablets_impressao_imagem",
+              "count": 1
+            },
+            {
+              "value": "brinquedos",
+              "count": 1
+            },
+            {
+              "value": "telefonia_fixa",
+              "count": 1
+            },
+            {
+              "value": "ferramentas_jardim",
+              "count": 1
+            },
+            {
+              "value": "fashion_bolsas_e_acessorios",
+              "count": 1
+            },
+            {
+              "value": "eletroportateis",
+              "count": 1
+            },
+            {
+              "value": "consoles_games",
+              "count": 1
+            }
+          ],
+          "distinct_count": 71,
+          "id_samples": [
+            "beleza_saude",
+            "informatica_acessorios",
+            "automotivo"
+          ]
+        },
+        {
+          "name": "product_category_name_english",
+          "inferred_dtype": "object",
+          "pandas_dtype": "object",
+          "null_count": 0,
+          "null_rate": 0.0,
+          "nunique": 71,
+          "top_values": [
+            {
+              "value": "health_beauty",
+              "count": 1
+            },
+            {
+              "value": "computers_accessories",
+              "count": 1
+            },
+            {
+              "value": "auto",
+              "count": 1
+            },
+            {
+              "value": "bed_bath_table",
+              "count": 1
+            },
+            {
+              "value": "furniture_decor",
+              "count": 1
+            },
+            {
+              "value": "sports_leisure",
+              "count": 1
+            },
+            {
+              "value": "perfumery",
+              "count": 1
+            },
+            {
+              "value": "housewares",
+              "count": 1
+            },
+            {
+              "value": "telephony",
+              "count": 1
+            },
+            {
+              "value": "watches_gifts",
+              "count": 1
+            },
+            {
+              "value": "food_drink",
+              "count": 1
+            },
+            {
+              "value": "baby",
+              "count": 1
+            },
+            {
+              "value": "stationery",
+              "count": 1
+            },
+            {
+              "value": "tablets_printing_image",
+              "count": 1
+            },
+            {
+              "value": "toys",
+              "count": 1
+            },
+            {
+              "value": "fixed_telephony",
+              "count": 1
+            },
+            {
+              "value": "garden_tools",
+              "count": 1
+            },
+            {
+              "value": "fashion_bags_accessories",
+              "count": 1
+            },
+            {
+              "value": "small_appliances",
+              "count": 1
+            },
+            {
+              "value": "consoles_games",
+              "count": 1
+            }
+          ],
+          "distinct_count": 71,
+          "id_samples": [
+            "health_beauty",
+            "computers_accessories",
+            "auto"
+          ]
+        }
+      ],
+      "uniqueness": {
+        "product_category_name": {
+          "unique_count": 71,
+          "row_count": 71,
+          "is_unique": true,
+          "duplicate_rows": 0
+        }
+      },
+      "full_duplicate_rows": 0
+    }
+  ],
+  "coverage": [
+    {
+      "link_type": "exact_column_name",
+      "column": "customer_id",
+      "parent_file": "olist_customers_dataset.csv",
+      "child_file": "olist_orders_dataset.csv",
+      "direction": "child_values_in_parent",
+      "child_distinct": 99441,
+      "parent_distinct": 99441,
+      "in_parent": 99441,
+      "orphans": 0,
+      "coverage_pct": 100.0,
+      "orphan_samples": []
+    },
+    {
+      "link_type": "exact_column_name_parent_not_in_child",
+      "column": "customer_id",
+      "parent_file": "olist_customers_dataset.csv",
+      "child_file": "olist_orders_dataset.csv",
+      "direction": "parent_values_in_child",
+      "child_distinct": 99441,
+      "parent_distinct": 99441,
+      "in_parent": 99441,
+      "orphans": 0,
+      "coverage_pct": 100.0,
+      "orphan_samples": [],
+      "note": "Percent of distinct parent values found in child; orphans here = parent keys with no matching child row."
+    },
+    {
+      "link_type": "exact_column_name",
+      "column": "order_id",
+      "parent_file": "olist_orders_dataset.csv",
+      "child_file": "olist_order_items_dataset.csv",
+      "direction": "child_values_in_parent",
+      "child_distinct": 98666,
+      "parent_distinct": 99441,
+      "in_parent": 98666,
+      "orphans": 0,
+      "coverage_pct": 100.0,
+      "orphan_samples": []
+    },
+    {
+      "link_type": "exact_column_name",
+      "column": "order_id",
+      "parent_file": "olist_orders_dataset.csv",
+      "child_file": "olist_order_payments_dataset.csv",
+      "direction": "child_values_in_parent",
+      "child_distinct": 99440,
+      "parent_distinct": 99441,
+      "in_parent": 99440,
+      "orphans": 0,
+      "coverage_pct": 100.0,
+      "orphan_samples": []
+    },
+    {
+      "link_type": "exact_column_name",
+      "column": "order_id",
+      "parent_file": "olist_orders_dataset.csv",
+      "child_file": "olist_order_reviews_dataset.csv",
+      "direction": "child_values_in_parent",
+      "child_distinct": 98673,
+      "parent_distinct": 99441,
+      "in_parent": 98673,
+      "orphans": 0,
+      "coverage_pct": 100.0,
+      "orphan_samples": []
+    },
+    {
+      "link_type": "exact_column_name_parent_not_in_child",
+      "column": "order_id",
+      "parent_file": "olist_orders_dataset.csv",
+      "child_file": "olist_order_items_dataset.csv",
+      "direction": "parent_values_in_child",
+      "child_distinct": 99441,
+      "parent_distinct": 98666,
+      "in_parent": 98666,
+      "orphans": 775,
+      "coverage_pct": 99.2206,
+      "orphan_samples": [
+        "0010dedd556712d7bb69a19cb7bbd37a",
+        "00a500bc03bc4ec968e574c2553bed4b",
+        "00b1cb0320190ca0daa2c88b35206009",
+        "00bca4adac549020c1273714d04d0208",
+        "00d0ffd14774da775ac832ba8520510f"
+      ],
+      "note": "Percent of distinct parent values found in child; orphans here = parent keys with no matching child row."
+    },
+    {
+      "link_type": "exact_column_name_parent_not_in_child",
+      "column": "order_id",
+      "parent_file": "olist_orders_dataset.csv",
+      "child_file": "olist_order_payments_dataset.csv",
+      "direction": "parent_values_in_child",
+      "child_distinct": 99441,
+      "parent_distinct": 99440,
+      "in_parent": 99440,
+      "orphans": 1,
+      "coverage_pct": 99.999,
+      "orphan_samples": [
+        "bfbd0f9bdef84302105ad712db648a6c"
+      ],
+      "note": "Percent of distinct parent values found in child; orphans here = parent keys with no matching child row."
+    },
+    {
+      "link_type": "exact_column_name_parent_not_in_child",
+      "column": "order_id",
+      "parent_file": "olist_orders_dataset.csv",
+      "child_file": "olist_order_reviews_dataset.csv",
+      "direction": "parent_values_in_child",
+      "child_distinct": 99441,
+      "parent_distinct": 98673,
+      "in_parent": 98673,
+      "orphans": 768,
+      "coverage_pct": 99.2277,
+      "orphan_samples": [
+        "00143d0f86d6fbd9f9b38ab440ac16f5",
+        "00335b686d693c7d72deeb12f8e89227",
+        "00a77f9cc25b05b2004752593d7b8888",
+        "00aa423621f35a9ca6c6240f275b0640",
+        "016754282c7690ebd6658f9f8e0a49bb"
+      ],
+      "note": "Percent of distinct parent values found in child; orphans here = parent keys with no matching child row."
+    },
+    {
+      "link_type": "exact_column_name",
+      "column": "product_category_name",
+      "parent_file": "product_category_name_translation.csv",
+      "child_file": "olist_products_dataset.csv",
+      "direction": "child_values_in_parent",
+      "child_distinct": 73,
+      "parent_distinct": 71,
+      "in_parent": 71,
+      "orphans": 2,
+      "coverage_pct": 97.2603,
+      "orphan_samples": [
+        "pc_gamer",
+        "portateis_cozinha_e_preparadores_de_alimentos"
+      ]
+    },
+    {
+      "link_type": "exact_column_name_parent_not_in_child",
+      "column": "product_category_name",
+      "parent_file": "product_category_name_translation.csv",
+      "child_file": "olist_products_dataset.csv",
+      "direction": "parent_values_in_child",
+      "child_distinct": 71,
+      "parent_distinct": 73,
+      "in_parent": 71,
+      "orphans": 0,
+      "coverage_pct": 100.0,
+      "orphan_samples": [],
+      "note": "Percent of distinct parent values found in child; orphans here = parent keys with no matching child row."
+    },
+    {
+      "link_type": "exact_column_name",
+      "column": "product_id",
+      "parent_file": "olist_products_dataset.csv",
+      "child_file": "olist_order_items_dataset.csv",
+      "direction": "child_values_in_parent",
+      "child_distinct": 32951,
+      "parent_distinct": 32951,
+      "in_parent": 32951,
+      "orphans": 0,
+      "coverage_pct": 100.0,
+      "orphan_samples": []
+    },
+    {
+      "link_type": "exact_column_name_parent_not_in_child",
+      "column": "product_id",
+      "parent_file": "olist_products_dataset.csv",
+      "child_file": "olist_order_items_dataset.csv",
+      "direction": "parent_values_in_child",
+      "child_distinct": 32951,
+      "parent_distinct": 32951,
+      "in_parent": 32951,
+      "orphans": 0,
+      "coverage_pct": 100.0,
+      "orphan_samples": [],
+      "note": "Percent of distinct parent values found in child; orphans here = parent keys with no matching child row."
+    },
+    {
+      "link_type": "exact_column_name",
+      "column": "seller_id",
+      "parent_file": "olist_sellers_dataset.csv",
+      "child_file": "olist_order_items_dataset.csv",
+      "direction": "child_values_in_parent",
+      "child_distinct": 3095,
+      "parent_distinct": 3095,
+      "in_parent": 3095,
+      "orphans": 0,
+      "coverage_pct": 100.0,
+      "orphan_samples": []
+    },
+    {
+      "link_type": "exact_column_name_parent_not_in_child",
+      "column": "seller_id",
+      "parent_file": "olist_sellers_dataset.csv",
+      "child_file": "olist_order_items_dataset.csv",
+      "direction": "parent_values_in_child",
+      "child_distinct": 3095,
+      "parent_distinct": 3095,
+      "in_parent": 3095,
+      "orphans": 0,
+      "coverage_pct": 100.0,
+      "orphan_samples": [],
+      "note": "Percent of distinct parent values found in child; orphans here = parent keys with no matching child row."
+    },
+    {
+      "link_type": "provisional_zip_prefix_name_link",
+      "column_mapping": "customer_zip_code_prefix \u2192 geolocation_zip_code_prefix",
+      "parent_file": "olist_geolocation_dataset.csv",
+      "parent_column": "geolocation_zip_code_prefix",
+      "child_file": "olist_customers_dataset.csv",
+      "child_column": "customer_zip_code_prefix",
+      "child_distinct": 14995,
+      "parent_distinct": 19015,
+      "in_parent": 14837,
+      "orphans": 158,
+      "coverage_pct": 98.9463,
+      "orphan_samples": [
+        "11547",
+        "12332",
+        "12770",
+        "13307",
+        "13529"
+      ],
+      "note": "Provisional name-based link candidate only; not a confirmed FK. Geolocation has many rows per zip prefix."
+    },
+    {
+      "link_type": "provisional_zip_prefix_name_link",
+      "column_mapping": "seller_zip_code_prefix \u2192 geolocation_zip_code_prefix",
+      "parent_file": "olist_geolocation_dataset.csv",
+      "parent_column": "geolocation_zip_code_prefix",
+      "child_file": "olist_sellers_dataset.csv",
+      "child_column": "seller_zip_code_prefix",
+      "child_distinct": 2246,
+      "parent_distinct": 19015,
+      "in_parent": 2238,
+      "orphans": 8,
+      "coverage_pct": 99.6438,
+      "orphan_samples": [
+        "2285",
+        "37708",
+        "71551",
+        "72580",
+        "73815"
+      ],
+      "note": "Provisional name-based link candidate only; not a confirmed FK. Geolocation has many rows per zip prefix."
+    }
+  ],
+  "quality_flags": [
+    {
+      "severity": "high",
+      "file": "olist_geolocation_dataset.csv",
+      "issue": "Composite key candidate `geolocation_zip_code_prefix|geolocation_lat|geolocation_lng` is NOT unique",
+      "evidence": {
+        "unique_count": 720154,
+        "row_count": 1000163,
+        "is_unique": false,
+        "duplicate_rows": 280009
+      }
+    },
+    {
+      "severity": "medium",
+      "file": "olist_geolocation_dataset.csv",
+      "issue": "Exact full-row duplicates present",
+      "evidence": {
+        "full_duplicate_rows": 261831
+      }
+    },
+    {
+      "severity": "info",
+      "file": "olist_geolocation_dataset.csv",
+      "issue": "Multiple geolocation rows per zip_code_prefix (not 1:1)",
+      "evidence": {
+        "unique_prefixes": 19015,
+        "row_count": 1000163,
+        "prefixes_with_multiple_rows": 17972,
+        "max_rows_per_prefix": 1146,
+        "mean_rows_per_prefix": 52.6
+      }
+    },
+    {
+      "severity": "info",
+      "file": "olist_order_payments_dataset.csv",
+      "issue": "Multiple payment rows per order_id (expected grain)",
+      "evidence": {
+        "unique_count": 99440,
+        "row_count": 103886,
+        "is_unique": false,
+        "orders_with_multiple_payments": 2961
+      }
+    },
+    {
+      "severity": "medium",
+      "file": "olist_order_reviews_dataset.csv",
+      "issue": "Multiple review rows per order_id",
+      "evidence": {
+        "unique_count": 98673,
+        "row_count": 99224,
+        "is_unique": false,
+        "orders_with_multiple_reviews": 547
+      }
+    },
+    {
+      "severity": "high",
+      "file": "olist_order_reviews_dataset.csv",
+      "issue": "Some duplicate review_id values span multiple distinct order_id values",
+      "evidence": {
+        "unique_count": 98410,
+        "row_count": 99224,
+        "is_unique": false,
+        "review_ids_with_multiple_rows": 789,
+        "review_ids_spanning_multiple_order_ids": 789
+      }
+    },
+    {
+      "severity": "info",
+      "file": "olist_orders_dataset.csv",
+      "issue": "Parent `order_id` values in `olist_orders_dataset.csv` have no match in `olist_order_items_dataset.csv` (775 distinct; parent\u2192child coverage 99.2206%)",
+      "evidence": {
+        "parent_keys_missing_from_child": 775,
+        "parent_distinct": 99441,
+        "coverage_pct": 99.2206,
+        "samples": [
+          "0010dedd556712d7bb69a19cb7bbd37a",
+          "00a500bc03bc4ec968e574c2553bed4b",
+          "00b1cb0320190ca0daa2c88b35206009",
+          "00bca4adac549020c1273714d04d0208",
+          "00d0ffd14774da775ac832ba8520510f"
+        ],
+        "link_type": "exact_column_name_parent_not_in_child"
+      }
+    },
+    {
+      "severity": "info",
+      "file": "olist_orders_dataset.csv",
+      "issue": "Parent `order_id` values in `olist_orders_dataset.csv` have no match in `olist_order_payments_dataset.csv` (1 distinct; parent\u2192child coverage 99.999%)",
+      "evidence": {
+        "parent_keys_missing_from_child": 1,
+        "parent_distinct": 99441,
+        "coverage_pct": 99.999,
+        "samples": [
+          "bfbd0f9bdef84302105ad712db648a6c"
+        ],
+        "link_type": "exact_column_name_parent_not_in_child"
+      }
+    },
+    {
+      "severity": "info",
+      "file": "olist_orders_dataset.csv",
+      "issue": "Parent `order_id` values in `olist_orders_dataset.csv` have no match in `olist_order_reviews_dataset.csv` (768 distinct; parent\u2192child coverage 99.2277%)",
+      "evidence": {
+        "parent_keys_missing_from_child": 768,
+        "parent_distinct": 99441,
+        "coverage_pct": 99.2277,
+        "samples": [
+          "00143d0f86d6fbd9f9b38ab440ac16f5",
+          "00335b686d693c7d72deeb12f8e89227",
+          "00a77f9cc25b05b2004752593d7b8888",
+          "00aa423621f35a9ca6c6240f275b0640",
+          "016754282c7690ebd6658f9f8e0a49bb"
+        ],
+        "link_type": "exact_column_name_parent_not_in_child"
+      }
+    },
+    {
+      "severity": "medium",
+      "file": "olist_products_dataset.csv",
+      "issue": "Child values for `product_category_name` not found in parent `product_category_name_translation.csv` (coverage 97.2603%)",
+      "evidence": {
+        "orphans": 2,
+        "child_distinct": 73,
+        "coverage_pct": 97.2603,
+        "orphan_samples": [
+          "pc_gamer",
+          "portateis_cozinha_e_preparadores_de_alimentos"
+        ],
+        "link_type": "exact_column_name"
+      }
+    },
+    {
+      "severity": "info",
+      "file": "olist_customers_dataset.csv",
+      "issue": "Provisional zip-prefix values for `customer_zip_code_prefix \u2192 geolocation_zip_code_prefix` not found in `olist_geolocation_dataset.csv` (coverage 98.9463%)",
+      "evidence": {
+        "orphans": 158,
+        "child_distinct": 14995,
+        "coverage_pct": 98.9463,
+        "orphan_samples": [
+          "11547",
+          "12332",
+          "12770",
+          "13307",
+          "13529"
+        ],
+        "link_type": "provisional_zip_prefix_name_link"
+      }
+    },
+    {
+      "severity": "info",
+      "file": "olist_sellers_dataset.csv",
+      "issue": "Provisional zip-prefix values for `seller_zip_code_prefix \u2192 geolocation_zip_code_prefix` not found in `olist_geolocation_dataset.csv` (coverage 99.6438%)",
+      "evidence": {
+        "orphans": 8,
+        "child_distinct": 2246,
+        "coverage_pct": 99.6438,
+        "orphan_samples": [
+          "2285",
+          "37708",
+          "71551",
+          "72580",
+          "73815"
+        ],
+        "link_type": "provisional_zip_prefix_name_link"
+      }
+    },
+    {
+      "severity": "info",
+      "file": "olist_orders_dataset.csv",
+      "issue": "Nullable/empty values in `order_approved_at` (160 / 99441, 0.16%)",
+      "evidence": {
+        "null_count": 160,
+        "null_rate": 0.001609
+      }
+    },
+    {
+      "severity": "info",
+      "file": "olist_orders_dataset.csv",
+      "issue": "Nullable/empty values in `order_delivered_carrier_date` (1783 / 99441, 1.79%)",
+      "evidence": {
+        "null_count": 1783,
+        "null_rate": 0.01793
+      }
+    },
+    {
+      "severity": "info",
+      "file": "olist_orders_dataset.csv",
+      "issue": "Nullable/empty values in `order_delivered_customer_date` (2965 / 99441, 2.98%)",
+      "evidence": {
+        "null_count": 2965,
+        "null_rate": 0.029817
+      }
+    },
+    {
+      "severity": "info",
+      "file": "olist_products_dataset.csv",
+      "issue": "Nullable/empty values in `product_category_name` (610 / 32951, 1.85%)",
+      "evidence": {
+        "null_count": 610,
+        "null_rate": 0.018512
+      }
+    }
+  ]
+}

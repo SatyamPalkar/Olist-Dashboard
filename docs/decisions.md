@@ -1,0 +1,102 @@
+# Architecture Decision Records (ADR)
+
+Format: Context → Decision → Consequences → Status  
+Shared database contracts may change only via an accepted ADR here.
+
+---
+
+## ADR-001 — Greenfield portfolio scope
+
+- **Date:** 2026-11-18
+- **Status:** Accepted
+- **Context:** Empty repository; need a demonstrable Retail BI platform using Olist public data.
+- **Decision:** Build end-to-end stack: immutable raw CSVs → Python/Pandas ETL → PostgreSQL (`staging` / `dw`) → Power BI, containerized with Docker Compose. Exclude Olist Marketing Funnel dataset unless explicitly requested later.
+- **Consequences:** Clear demo path; nine CSVs only; join graph stays within core ecommerce schema.
+
+---
+
+## ADR-002 — Environment-based secrets
+
+- **Date:** 2026-11-18
+- **Status:** Accepted
+- **Context:** PostgreSQL credentials must never appear in Git.
+- **Decision:** Use `.env` (gitignored) + `.env.example` (placeholders only). Application code reads `POSTGRES_*` variables.
+- **Consequences:** Local/demo setup requires copy of `.env.example` → `.env`; CI can inject secrets separately.
+
+---
+
+## ADR-003 — Layered schemas in one PostgreSQL instance
+
+- **Date:** 2026-11-18
+- **Status:** Superseded by ADR-005
+- **Context:** Need separation of raw-like loads vs analytics model without multiple servers for a portfolio project.
+- **Decision:** Single Postgres service with schemas `staging` and `dw` (optional `marts` later).
+- **Consequences:** Replaced after SQL Architect delivered `raw` / `staging` / `analytics`.
+
+---
+
+## ADR-004 — Power BI connectivity mode
+
+- **Date:** 2026-11-18
+- **Status:** Accepted
+- **Context:** Import vs DirectQuery for employer demo.
+- **Decision:** Prefer Import mode against `analytics` views / tables for offline reliability in demos.
+- **Consequences:** Refresh script/docs needed; DirectQuery optional stretch goal. Aligns with `powerbi/SEMANTIC_MODEL.md`.
+
+---
+
+## ADR-005 — Canonical schemas: `raw` / `staging` / `analytics`
+
+- **Date:** 2026-11-18
+- **Status:** Accepted (supersedes ADR-003 naming)
+- **Context:** Parallel SQL Architect work under `database/` implemented three schemas with contracts in `database/docs/contracts_raw_staging.md`. Orchestrator draft had used `dw` / `marts`, creating a contract collision risk.
+- **Decision:**
+  1. Canonical PostgreSQL schemas are **`raw`**, **`staging`**, **`analytics`**.
+  2. Canonical SQL tree is **`database/`** (not empty `sql/` placeholders).
+  3. Raw tables load source columns as TEXT (+ `_loaded_at`); typing in staging.
+  4. Geolocation staging grain = one row per zip prefix (AVG lat/lng) — matches profile evidence (multi-row prefixes).
+  5. Reviews use surrogate `review_sk` because `review_id` is not unique (profile: 814 duplicate review_id rows).
+- **Consequences:** All agents must target these names. Power BI connects to `analytics` only. Further column changes require ADR + contract update.
+
+---
+
+## ADR-006 — Profile-driven quality constraints (Phase 2 evidence)
+
+- **Date:** 2026-11-18
+- **Status:** Accepted
+- **Context:** `docs/data_profile.md` from `scripts/profile_olist_csvs.py` against `data/raw/`.
+- **Decision:** Treat the following as known facts for ETL/QA design:
+  - Orders purchase range ≈ 2016-09-04 → 2018-10-17
+  - Geolocation: ~261k full-row duplicates; collapse in staging
+  - Zip orphans: ~158 customer prefixes, ~8 seller prefixes missing from geolocation
+  - Keep all review rows in staging/analytics fact (547 orders with multiple reviews); do not silently drop to “latest only” without BA sign-off
+- **Consequences:** QA tests must assert these behaviours explicitly; KPI docs must state review and geo handling.
+
+---
+
+## ADR-007 — Dashboard KPI scope: delivered orders only
+
+- **Date:** 2026-11-18
+- **Status:** Accepted for the Tableau dashboard (resolves the "KPI denominator rules" pending item for this artefact)
+- **Context:** Earlier BA and BI drafts mixed delivered-only and non-canceled sales. The all-status merchandise total (R$ 13,591,643.70) differs from the delivered-only total (R$ 13,221,498.11).
+- **Decision:** All dashboard KPIs and charts use delivered orders only (96,478 orders, purchased 2016-09-15 → 2018-08-29). The dashboard header and footer state the scope.
+- **Consequences:** Recent months are slightly understated because orders that had not been delivered at the data cut-off are excluded. Status-mix analysis needs a separate view.
+
+## ADR-008 — Tableau reads warehouse extracts, not a live connection
+
+- **Date:** 2026-11-18
+- **Status:** Accepted
+- **Context:** The only working PostgreSQL instance is a temporary cluster in `/tmp`. Tableau's named PostgreSQL connector lacked a driver, and the earlier JDBC-connected workbook related order and payment facts, which risks fan-out.
+- **Decision:** `tableau/export_tableau_data.sql` exports three single-grain CSV extracts (order, item, payment) from `analytics`. The workbook is generated by `tableau/build_tableau_workbook.py` and packaged as a `.twbx`.
+- **Consequences:** The dashboard is portable and does not depend on the temporary database. Data freshness requires re-running the export and generator. A live connection can be added once a persistent PostgreSQL deployment exists.
+- **Amendment (2026-11-18):** extended to seven single-grain extracts: order, item, order × category, order fulfilment (carrier hand-off from `staging.stg_orders`), order × seller, customer, and credit-card order. Each Tableau sheet still reads exactly one extract.
+
+---
+
+## Pending decisions (no ADR yet)
+
+| Topic | Owner | Target phase |
+|-------|-------|--------------|
+| KPI denominator rules (e.g. delivered-only GMV) | Business Analyst | 7 (decided for Tableau dashboard: ADR-007) |
+| Whether to keep multiple reviews in Power BI fact or prefer latest | BA + BI | 7 / 8 |
+| Docker image/tag and compose service names | Orchestrator + DE | 3 / 10 |

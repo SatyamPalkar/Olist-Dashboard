@@ -1,0 +1,56 @@
+{
+  "name": "Olist Corporate",
+  "dataColors": [
+    "#0B3A53",
+    "#1F7A6C",
+    "#3D7CA8",
+    "#C4A35A",
+    "#B33A3A",
+    "#5C6B73",
+    "#7A9E9F",
+    "#D9896A"
+  ],
+  "background": "#F5F7F8",
+  "foreground": "#0B3A53",
+  "tableAccent": "#1F7A6C",
+  "good": "#1F7A6C",
+  "neutral": "#5C6B73",
+  "bad": "#B33A3A",
+  "maximum": "#0B3A53",
+  "center": "#3D7CA8",
+  "minimum": "#B33A3A",
+  "textClasses": {
+    "callout": {
+      "fontSize": 28,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#0B3A53"
+    },
+    "title": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#0B3A53"
+    },
+    "header": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#0B3A53"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#5C6B73"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "*": [
+          {
+            "fontSize": 10,
+            "fontFamily": "Segoe UI"
+          }
+        ]
+      }
+    }
+  }
+}
