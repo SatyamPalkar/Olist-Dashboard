@@ -17,6 +17,8 @@ Navigation buttons on each sidebar switch dashboards (sheet tabs also work).
 
 Usage (from the project root):
     python3 tableau/build_tableau_workbook.py            # writes .twb and .twbx
+    python3 tableau/build_tableau_workbook.py --public   # also writes the Tableau Public edition
+                                                          # (needs tableau/build_hyper_extracts.py first)
     python3 tableau/build_tableau_workbook.py --qa DIR   # also writes QA copies (one per
                                                           # dashboard opened first) to DIR
 """
@@ -137,7 +139,9 @@ class DS:
     def all_names(self):
         return [c[0] for c in self.cols] + list(self.calcs)
 
-    def xml(self, directory: str) -> str:
+    def xml(self, directory: str, hyper: bool = False) -> str:
+        if hyper:   # Tableau Public needs extracts: connect to a packaged .hyper file (table Extract.Extract)
+            return self._xml_hyper(directory)
         rel_cols = "".join(f"<column {a(datatype=c[1], name=c[0], ordinal=i)} />" for i, c in enumerate(self.cols))
         relation = (f"<relation {a(connection=self.conn, name=self.filename, table='[' + self.filename.replace('.', '#') + ']', type='table')}>"
                     f"<columns {a(character_set='UTF-8', header='yes', locale='en_US', separator=',')}>{rel_cols}</columns></relation>")
@@ -152,6 +156,26 @@ class DS:
             f"<connection {a(**{'class': 'textscan', 'directory': directory, 'filename': self.filename, 'password': '', 'server': ''})} />"
             f"</named-connection></named-connections>"
             f"{relation}</connection>"
+            f"<aliases enabled=\"yes\" />{cols}"
+            f"<layout {a(dim_ordering='alphabetic', measure_ordering='alphabetic', show_structure='true')} />"
+            f"{graph}</datasource>"
+        )
+
+
+    def _xml_hyper(self, directory: str) -> str:
+        conn = self.conn.replace("textscan.", "hyper.")
+        dbname = f"{directory}/{Path(self.filename).stem}.hyper"
+        relation = f"<relation {a(connection=conn, name='Extract', table='[Extract].[Extract]', type='table')} />"
+        graph = ("<object-graph><objects><object caption=\"Migrated Data\" id=\"Migrated Data\">"
+                 f"<properties context=\"\">{relation}</properties></object></objects></object-graph>")
+        cols = "".join(self.col_xml(n) for n in self.all_names())
+        hyper_conn = a(**{"authentication": "auth-none", "author-locale": "en_US", "class": "hyper", "dbname": dbname,
+                          "default-settings": "yes", "port": "", "sslmode": "", "username": "tableau_internal_user"})
+        return (
+            f"<datasource {a(caption=self.caption, inline='true', name=self.name, version='18.1')}>"
+            f"<connection class=\"federated\"><named-connections>"
+            f"<named-connection {a(caption=self.caption, name=conn)}><connection {hyper_conn} /></named-connection>"
+            f"</named-connections>{relation}</connection>"
             f"<aliases enabled=\"yes\" />{cols}"
             f"<layout {a(dim_ordering='alphabetic', measure_ordering='alphabetic', show_structure='true')} />"
             f"{graph}</datasource>"
@@ -1222,7 +1246,7 @@ def windows_xml(first) -> str:
     return f"<windows source-height=\"30\">{out}</windows>"
 
 
-def workbook_xml(directory: str, first=DASH_OVERVIEW, fixed_size=True) -> str:
+def workbook_xml(directory: str, first=DASH_OVERVIEW, fixed_size=True, hyper=False) -> str:
     sheets = build_worksheets(headroom())
     return (
         "<?xml version='1.0' encoding='utf-8' ?>\n"
@@ -1234,11 +1258,30 @@ def workbook_xml(directory: str, first=DASH_OVERVIEW, fixed_size=True) -> str:
         "<preferences><preference name=\"ui.encoding.shelf.height\" value=\"24\" /><preference name=\"ui.shelf.height\" value=\"26\" /></preferences>"
         "<style><style-rule element=\"all\"><format attr=\"font-family\" value=\"Tableau Book\" /></style-rule>"
         "<style-rule element=\"worksheet\"><format attr=\"font-size\" value=\"9\" /></style-rule></style>"
-        f"<datasources>{''.join(d.xml(directory) for d in (ORDERS, ITEMS, CATS, FUL, SEL, CUST, CARDO, PAYMENTS))}</datasources>"
+        f"<datasources>{''.join(d.xml(directory, hyper) for d in DATASOURCES)}</datasources>"
         f"{actions_xml()}"
         f"<worksheets>{''.join(x for _, x in sheets)}</worksheets>"
         f"{dashboards_xml(first, fixed_size)}{windows_xml(first)}</workbook>\n"
     )
+
+
+DATASOURCES = (ORDERS, ITEMS, CATS, FUL, SEL, CUST, CARDO, PAYMENTS)
+HYPER_DIR = HERE / "hyper"
+PUBLIC_NAME = "Olist Delivery Analytics - Tableau Public"
+
+
+def write_public_twbx(path: Path) -> None:
+    """Tableau Public edition: same workbook, data sources point at packaged .hyper extracts
+    built by tableau/build_hyper_extracts.py (Tableau Public rejects live text-file connections)."""
+    missing = [d.filename for d in DATASOURCES if not (HYPER_DIR / (Path(d.filename).stem + ".hyper")).exists()]
+    if missing:
+        raise SystemExit(f"missing extracts for {missing}: run tableau/build_hyper_extracts.py first")
+    packaged = pretty(workbook_xml("Data/olist", hyper=True))
+    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr(f"{PUBLIC_NAME}.twb", packaged)
+        for d in DATASOURCES:
+            stem = Path(d.filename).stem
+            z.write(HYPER_DIR / f"{stem}.hyper", f"Data/olist/{stem}.hyper")
 
 
 def pretty(xml_text: str) -> str:
@@ -1258,6 +1301,10 @@ def main() -> None:
     twb.write_text(pretty(workbook_xml(str(DATA_DIR))), encoding="utf-8")
     write_twbx(HERE / f"{NAME}.twbx")
     print(f"wrote {twb}\nwrote {HERE / (NAME + '.twbx')}")
+    if "--public" in sys.argv:
+        out = HERE / f"{PUBLIC_NAME}.twbx"
+        write_public_twbx(out)
+        print(f"wrote {out}")
     if "--qa" in sys.argv:   # screenshot copies: identical workbook, but each opens on a different dashboard
         out = Path(sys.argv[sys.argv.index("--qa") + 1])
         out.mkdir(parents=True, exist_ok=True)

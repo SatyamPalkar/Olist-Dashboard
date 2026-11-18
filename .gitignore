@@ -58,3 +58,7 @@ Olist Retail Analytics - Dashboard.twb
 
 # Editor artefacts
 .cursor
+
+# Generated build artefacts
+hyperd.log
+tableau/hyper/

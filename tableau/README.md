@@ -33,6 +33,8 @@ data/raw/*.csv ─► scripts/build_warehouse.py ─► PostgreSQL raw → stagi
 | `export_tableau_data.sql` | Exports the grain-safe extracts, with the data-quality profile and exclusions written as comments. |
 | `build_tableau_workbook.py` | Generates both workbook files. `--qa DIR` also writes copies that open on each page (used for screenshots). |
 | `screenshots/*.png` | Full-canvas captures of the four pages. |
+| `Olist Delivery Analytics - Tableau Public.twbx` | Tableau Public edition: the same workbook, with the data packaged as `.hyper` extracts, because Tableau Public doesn't accept live text-file connections. |
+| `build_hyper_extracts.py` | Converts the CSV extracts into `.hyper` files (needs `pip install tableauhyperapi`) and checks row counts and numeric totals against the CSVs. |
 
 ### Extracts (one grain each; never joined in Tableau)
 
@@ -54,6 +56,11 @@ data/raw/*.csv ─► scripts/build_warehouse.py ─► PostgreSQL raw → stagi
 export PGHOST=127.0.0.1 PGPORT=55439 PGDATABASE=olist_test   # example: local test cluster
 psql -v ON_ERROR_STOP=1 -f tableau/export_tableau_data.sql   # run from the project root
 python3 tableau/build_tableau_workbook.py
+
+# Tableau Public edition (packaged .hyper extracts)
+pip install tableauhyperapi
+python3 tableau/build_hyper_extracts.py
+python3 tableau/build_tableau_workbook.py --public
 ```
 
 ## Scope, definitions and data-quality decisions
